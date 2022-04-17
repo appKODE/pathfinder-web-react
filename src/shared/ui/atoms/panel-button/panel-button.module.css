@@ -1,0 +1,16 @@
+.wrapper {
+    appearance: none;
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.wrapper:hover {
+    background-color: #333333;
+}
+
+.wrapper:hover svg path {
+    fill: #eee;
+}
