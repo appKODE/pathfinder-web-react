@@ -1,6 +1,6 @@
 {
   "name": "@kode-frontend/pathfinder-web-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React ui for @kode-frontend/pathfinder-web-core",
   "author": "KODE frontend team",
   "license": "MIT",
