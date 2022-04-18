@@ -1,0 +1,18 @@
+.group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+.label {
+  padding: 4px;
+  position: relative;
+  padding-left: 32px;
+  cursor: pointer;
+}
+
+.input {
+  margin: 2px 8px;
+  position: absolute;
+  left: 0;
+}

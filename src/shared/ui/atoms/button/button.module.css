@@ -1,0 +1,28 @@
+.wrapper {
+    appearance: none;
+    padding: 3px 6px;
+    border: 1px solid #333;
+    background-color: #90caf9;
+    color: rgba(51, 51, 51, 0.85);
+    width: 100%;
+    margin: 0 !important;
+}
+
+.wrapper:hover {
+     background-color: rgba(144, 202, 249, 0.6);
+     cursor: pointer;
+}
+
+.transparent {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.active {
+    color: #fff;
+    background-color: #282c34;
+}
+
+.active:hover {
+    background-color: #282c34;
+}
