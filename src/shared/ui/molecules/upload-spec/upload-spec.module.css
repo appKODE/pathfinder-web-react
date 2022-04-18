@@ -1,0 +1,17 @@
+.label {
+  color: blue;
+  display: inline-block;
+  margin: 8px;
+  cursor: pointer;
+  padding: 8px 16px;
+  text-decoration: underline;
+  border-radius: 4px;
+}
+
+.label:hover {
+  background: #ddd;
+}
+
+.hide {
+  display: none;
+}

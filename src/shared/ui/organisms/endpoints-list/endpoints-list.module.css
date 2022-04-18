@@ -1,0 +1,71 @@
+.endpointsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.endpointsTable tr:hover {
+  background: #eee;
+}
+
+.endpointsTable tr td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+  padding: 3px 6px;
+  box-sizing: border-box;
+  overflow: auto;
+  max-height: 80vh;
+}
+
+.item_wrapper {
+  flex: 1;
+  display: flex;
+  background: #000;
+  margin-top: 3px;
+  box-sizing: border-box;
+}
+
+.item_reset {
+  display: flex;
+}
+
+.actions_wrapper {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.endpointName {
+  font-size: 14px;
+  color: #666;
+}
+
+.method {
+  font-size: 12px;
+  display: inline-block;
+  padding: 4px 8px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.GET {
+  background: green;
+}
+.POST {
+  background: blue;
+}
+.DELETE {
+  background: red;
+}
+.PATCH {
+  background: orange;
+}
+.PUT {
+  background: orange;
+}
