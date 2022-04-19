@@ -1,10 +1,17 @@
-# :construction: :construction: :construction: THIS PROJECT HAS EXPERIMENTAL STATUS, DON'T USE IT :construction: :construction: :construction:
+<h3 align="center">:construction: :construction: :construction: THIS PROJECT HAS AN EXPERIMENTAL STATUS, DON'T USE IT :construction: :construction: :construction:</h3>
+&nbsp;
 
 # @kode-frontend/pathfinder-web-react
 
-[![NPM](https://img.shields.io/npm/v/@kode-frontend/pathfinder-web-react.svg)](https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![npm](https://img.shields.io/npm/v/@kode-frontend/pathfinder-web-react.svg)](https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react)
+[![npm](https://img.shields.io/npm/dt/@kode-frontend/pathfinder-web-react.svg)](https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react)
+[![npm](https://img.shields.io/npm/l/@kode-frontend/pathfinder-web-react.svg)](https://github.com/appKODE/pathfinder-web-react/blob/main/LICENSE)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![status](https://img.shields.io/badge/status-experimental-red?style=flat&logo)](#)
 
-## Install
+Pathfinder is a tool that allows to substitute the base URL for requests.
+
+## Installation
 
 ```bash
 npm install --save @kode-frontend/pathfinder-web-react
@@ -16,36 +23,51 @@ or
 yarn add @kode-frontend/pathfinder-web-react
 ```
 
+## Introduction
+
+There are cases in which it is useful to monitor or manipulate HTTP requests, instead of letting it happen as is. Pathfinder is a tool that allows to configure the base path for an API on the client side, both for all requests and for each one separately. It provides an UI panel, which enables to interactively change the requests environment in accordance with an uploaded OpenAPI config.
+
+Pathfinder works with the [OpenAPI 3.0 Specification](https://swagger.io/specification/), which can be exported from [Stoplight](https://stoplight.io/).
+
+### Features:
+
+- **Request interception:**\
+   intercepts requests according to the specified environment and changes base URL.
+- **Feature toggle for production:**\
+   allows to enable or disable a feature through the developer tools.
+- **Uploading and updating data from an OpenAPI config:**\
+   updates environment lists and paths on the spot by uploading an OpenAPI config.
+
 ## Usage
 
-Local development is broken into two parts (ideally using two tabs).
+Local development is divided into two parts (ideally using two tabs in your terminal).
 
-First, run rollup to watch your src/ module and automatically recompile it into dist/ whenever you make changes.
+First, run rollup to watch your `src/` module and automatically recompile it into `dist/` whenever you make changes.
 
-```
+```bash
 npm start # runs rollup with watch flag
 ```
 
-The second part will be running the example/ create-react-app that's linked to the local version of your module.
+Second, run the `example/` create-react-app that's linked to the local version of your module.
 
-```
+```bash
 # (in another tab)
 cd example
 npm start # runs create-react-app dev server
 ```
 
-Now, anytime you make a change to your library in src/ or to the example app's example/src, create-react-app will live-reload your local dev server so you can iterate on your component in real-time.
+Now, anytime you make a change to your library in `src/` or to the example app's `example/src/`, create-react-app will live-reload your local dev server so you can iterate on your component in real-time.
 
 ## TODO
 
 - [ ] replace css modules with styled components
 - [ ] add storybook
 - [ ] refactor components
-- [ ] add examples of usage
+- [ ] add usage examples
 
 ## License
 
-MIT © [](https://github.com/appKODE/pathfinder-web-react/LICENCE)
+[MIT ©](https://github.com/appKODE/pathfinder-web-react/LICENCE)
 
 ## Commands
 
