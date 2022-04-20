@@ -20,12 +20,12 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
+    "start": "yarn link && tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "release": "release-it",
-    "prepare": "tsdx build",
+    "prepare": "yarn unlink && tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
