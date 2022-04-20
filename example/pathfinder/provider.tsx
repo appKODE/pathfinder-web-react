@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Pathfinder } from '@kode-frontend/pathfinder-web-react';
+
 import { storage } from '@kode-frontend/pathfinder-web-local-storage';
 import { openApiResolver } from '@kode-frontend/pathfinder-web-open-api';
 
