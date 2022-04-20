@@ -10,11 +10,17 @@
   <a href="https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react">
 		<img alt="npm downloads" src="https://img.shields.io/npm/dt/@kode-frontend/pathfinder-web-react.svg">
 	</a>
+  <a href="https://packagephobia.com/result?p=@kode-frontend/pathfinder-web-react">
+		<img alt="install size" src="https://packagephobia.com/badge?p=@kode-frontend/pathfinder-web-react">
+	</a>
   <a href="https://github.com/appKODE/pathfinder-web-react/blob/main/LICENSE">
 		<img alt="npm license" src="https://img.shields.io/npm/l/@kode-frontend/pathfinder-web-react.svg">
 	</a>
   <a href="https://standardjs.com">
 		<img alt="standard js" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg">
+	</a>
+  <a href="https://reactjs.org/">
+		<img alt="react version" src="https://img.shields.io/badge/react->=16-green?style=flat&logo">
 	</a>
   <br>
   <a href="#">
