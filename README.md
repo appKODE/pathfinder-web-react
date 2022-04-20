@@ -1,20 +1,43 @@
 <h3 align="center">:construction: :construction: :construction: THIS PROJECT HAS AN EXPERIMENTAL STATUS, DON'T USE IT :construction: :construction: :construction:</h3>
 &nbsp;
 
-# @kode-frontend/pathfinder-web-react
+<h1 align="center">@kode-frontend/pathfinder-web-react</h1>
 
-[![npm](https://img.shields.io/npm/v/@kode-frontend/pathfinder-web-react.svg)](https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react)
-[![npm](https://img.shields.io/npm/dt/@kode-frontend/pathfinder-web-react.svg)](https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react)
-[![npm](https://img.shields.io/npm/l/@kode-frontend/pathfinder-web-react.svg)](https://github.com/appKODE/pathfinder-web-react/blob/main/LICENSE)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![status](https://img.shields.io/badge/status-experimental-red?style=flat&logo)](#)
+<div align="center">
+  <a href="https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react">
+		<img alt="npm version" src="https://img.shields.io/npm/v/@kode-frontend/pathfinder-web-react.svg">
+	</a>
+  <a href="https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react">
+		<img alt="npm downloads" src="https://img.shields.io/npm/dt/@kode-frontend/pathfinder-web-react.svg">
+	</a>
+  <a href="https://github.com/appKODE/pathfinder-web-react/blob/main/LICENSE">
+		<img alt="npm license" src="https://img.shields.io/npm/l/@kode-frontend/pathfinder-web-react.svg">
+	</a>
+  <a href="https://standardjs.com">
+		<img alt="standard js" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg">
+	</a>
+  <br>
+  <a href="#">
+		<img alt="status" src="https://img.shields.io/badge/status-experimental-red?style=flat&logo">
+	</a>
+</div>
 
-Pathfinder is a tool that allows to substitute the base URL for requests.
+<p align="center">
+  <a href="#installation">Installation</a> | 
+  <a href="#features">Features</a> |
+  <a href="#quickstart">Quickstart</a> |
+  <a href="#usage">Usage</a> |
+  <a href="#commands">Commands</a> |
+  <a href="#example">Example</a>
+</p>
+&nbsp;
+
+Pathfinder is a tool that allows to substitute the base URL for requests, helping with global error handling, testing, mocking, and more. This package provides a useful UI panel for easy HTTP requests manipulations on the client side.
 
 ## Installation
 
 ```bash
-npm install --save @kode-frontend/pathfinder-web-react
+npm i @kode-frontend/pathfinder-web-react
 ```
 
 or
@@ -23,9 +46,27 @@ or
 yarn add @kode-frontend/pathfinder-web-react
 ```
 
+Pathfinder is intended to be paired with a storage adapter and an OpenAPI resolver, which can be fully customized or installed as npm packages.
+
+We recommend using special libraries for integrating Pathfinder into your application. They are easy to integrate into an existing project and do not require any further development.
+
+Save as dependencies\* :
+
+```bash
+npm i @kode-frontend/pathfinder-web-local-storage @kode-frontend/pathfinder-web-open-api
+```
+
+or
+
+```bash
+yarn add @kode-frontend/pathfinder-web-local-storage @kode-frontend/pathfinder-web-open-api
+```
+
+_\*You can read more about [pathfinder-web-local-storage](https://www.npmjs.com/package/@kode-frontend/pathfinder-web-local-storage) and [pathfinder-web-open-api](https://www.npmjs.com/package/@kode-frontend/pathfinder-web-open-api) on their pages._
+
 ## Introduction
 
-There are cases in which it is useful to monitor or manipulate HTTP requests, instead of letting it happen as is. Pathfinder is a tool that allows to configure the base path for an API on the client side, both for all requests and for each one separately. It provides an UI panel, which enables to interactively change the requests environment in accordance with an uploaded OpenAPI config.
+There are cases in which it is useful to monitor or manipulate HTTP requests, instead of letting it happen as is. Pathfinder is a tool that allows to configure the base path for an API on the client side, both for all requests and for each one separately. It provides a UI panel, which enables to interactively change the requests environment in accordance with an uploaded OpenAPI config.
 
 Pathfinder works with the [OpenAPI 3.0 Specification](https://swagger.io/specification/), which can be exported from [Stoplight](https://stoplight.io/).
 
@@ -37,6 +78,12 @@ Pathfinder works with the [OpenAPI 3.0 Specification](https://swagger.io/specifi
    allows to enable or disable a feature through the developer tools.
 - **Uploading and updating data from an OpenAPI config:**\
    updates environment lists and paths on the spot by uploading an OpenAPI config.
+
+## Quickstart
+
+```jsx
+
+```
 
 ## Usage
 
@@ -64,10 +111,6 @@ Now, anytime you make a change to your library in `src/` or to the example app's
 - [ ] add storybook
 - [ ] refactor components
 - [ ] add usage examples
-
-## License
-
-[MIT ©](https://github.com/appKODE/pathfinder-web-react/LICENCE)
 
 ## Commands
 
@@ -135,85 +178,6 @@ TSDX uses [Rollup](https://rollupjs.org) as a bundler and generates multiple rol
 
 `tsconfig.json` is set up to interpret `dom` and `esnext` types, as well as `react` for `jsx`. Adjust according to your needs.
 
-## Continuous Integration
+## License
 
-### GitHub Actions
-
-Two actions are added by default:
-
-- `main` which installs deps w/ cache, lints, tests, and builds on all pushes against a Node and OS matrix
-- `size` which comments cost comparison of your library on every pull request using [size-limit](https://github.com/ai/size-limit)
-
-## Optimizations
-
-Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
-
-```js
-// ./types/index.d.ts
-declare var __DEV__: boolean;
-
-// inside your code...
-if (__DEV__) {
-  console.log('foo');
-}
-```
-
-You can also choose to install and use [invariant](https://github.com/palmerhq/tsdx#invariant) and [warning](https://github.com/palmerhq/tsdx#warning) functions.
-
-## Module Formats
-
-CJS, ESModules, and UMD module formats are supported.
-
-The appropriate paths are configured in `package.json` and `dist/index.js` accordingly. Please report if any issues are found.
-
-## Deploying the Example Playground
-
-The Playground is just a simple [Parcel](https://parceljs.org) app, you can deploy it anywhere you would normally deploy that. Here are some guidelines for **manually** deploying with the Netlify CLI (`npm i -g netlify-cli`):
-
-```bash
-cd example # if not already in the example folder
-npm run build # builds to dist
-netlify deploy # deploy the dist folder
-```
-
-Alternatively, if you already have a git repo connected, you can set up continuous deployment with Netlify:
-
-```bash
-netlify init
-# build command: yarn build && cd example && yarn && yarn build
-# directory to deploy: example/dist
-# pick yes for netlify.toml
-```
-
-## Named Exports
-
-Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
-
-## Including Styles
-
-There are many ways to ship styles, including with CSS-in-JS. TSDX has no opinion on this, configure how you like.
-
-For vanilla CSS, you can include it at the root directory and add it to the `files` section in your `package.json`, so that it can be imported separately by your users and run through their bundler's loader.
-
-## Publishing to NPM
-
-We recommend using [np](https://github.com/sindresorhus/np).
-
-## Usage with Lerna
-
-When creating a new package with TSDX within a project set up with Lerna, you might encounter a `Cannot resolve dependency` error when trying to run the `example` project. To fix that you will need to make changes to the `package.json` file _inside the `example` directory_.
-
-The problem is that due to the nature of how dependencies are installed in Lerna projects, the aliases in the example project's `package.json` might not point to the right place, as those dependencies might have been installed in the root of your Lerna project.
-
-Change the `alias` to point to where those packages are actually installed. This depends on the directory structure of your Lerna project, so the actual path might be different from the diff below.
-
-```diff
-   "alias": {
--    "react": "../node_modules/react",
--    "react-dom": "../node_modules/react-dom"
-+    "react": "../../../node_modules/react",
-+    "react-dom": "../../../node_modules/react-dom"
-   },
-```
-
-An alternative to fixing this problem would be to remove aliases altogether and define the dependencies referenced as aliases as dev dependencies instead. [However, that might cause other problems.](https://github.com/palmerhq/tsdx/issues/64)
+[MIT ©](https://github.com/appKODE/pathfinder-web-react/LICENCE)
