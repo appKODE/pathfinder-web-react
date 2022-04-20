@@ -87,8 +87,43 @@ Pathfinder works with the [OpenAPI 3.0 Specification](https://swagger.io/specifi
 
 ## Quickstart
 
-```jsx
+Create a new provider component with Pathfinder. Import `storage` and `openApiResolver` from the corresponding packages or create custom ones.
 
+```jsx
+import { ReactNode } from 'react';
+import { Pathfinder } from '@kode-frontend/pathfinder-web-react';
+import { storage } from '@kode-frontend/pathfinder-web-local-storage';
+import { openApiResolver } from '@kode-frontend/pathfinder-web-open-api';
+
+type Props = {
+  children: ReactNode,
+};
+
+export const PathfinderProvider = ({ children }: Props) => {
+  return (
+    <Pathfinder
+      resolver={openApiResolver}
+      storage={storage}
+      active={process.env.NODE_ENV !== 'production'}
+    >
+      {children}
+    </Pathfinder>
+  );
+};
+```
+
+Import `PathfinderProvider` and render it around your whole app.
+
+```jsx
+import { PathfinderProvider } from './pathfinder';
+
+const App = () => {
+  return (
+    <PathfinderProvider>
+      <div>your app</div>
+    </PathfinderProvider>
+  );
+};
 ```
 
 ## Usage
