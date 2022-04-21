@@ -44,11 +44,8 @@ Pathfinder is a tool that allows to substitute the base URL for requests, helpin
 
 ```bash
 npm i @kode-frontend/pathfinder-web-react
-```
 
-or
-
-```bash
+# or using yarn
 yarn add @kode-frontend/pathfinder-web-react
 ```
 
@@ -60,11 +57,8 @@ Save as dependencies\* :
 
 ```bash
 npm i @kode-frontend/pathfinder-web-local-storage @kode-frontend/pathfinder-web-open-api
-```
 
-or
-
-```bash
+# or using yarn
 yarn add @kode-frontend/pathfinder-web-local-storage @kode-frontend/pathfinder-web-open-api
 ```
 
@@ -128,7 +122,28 @@ const App = () => {
 
 ## Usage
 
+Run your project.
+
+During local development (`process.env.NODE_ENV !== 'production'`) you will see a button with gears in the bottom right of the screen. When clicking it the Pathfinder UI panel appears. You need to upload your [OpenAPI 3.0 Specification](https://swagger.io/specification/), then you can configure the base paths for all requests, as well as for each one individually.
+
+<!-- TODO: добавить скрин с панелью -->
+
+### Local development
+
 Local development is divided into two parts (ideally using two tabs in your terminal).
+
+[TSDX](https://tsdx.io/) scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
+
+The recommended workflow is to run TSDX in one terminal:
+
+```bash
+npm start
+
+# or using yarn
+yarn start
+```
+
+This builds to `/dist` and runs the project in watch mode so any edits you save inside `/src` causes a rebuild to `/dist`.
 
 First, run rollup to watch your `src/` module and automatically recompile it into `dist/` whenever you make changes.
 
@@ -153,6 +168,8 @@ Now, anytime you make a change to your library in `src/` or to the example app's
 - [ ] refactor components
 - [ ] add usage examples
 
+<br>
+
 ## Commands
 
 TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
@@ -160,7 +177,10 @@ TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based]
 The recommended workflow is to run TSDX in one terminal:
 
 ```bash
-npm start # or yarn start
+npm start
+
+# or using yarn
+yarn start
 ```
 
 This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
