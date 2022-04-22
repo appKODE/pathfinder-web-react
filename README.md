@@ -33,7 +33,6 @@
   <a href="#features">Features</a> |
   <a href="#quickstart">Quickstart</a> |
   <a href="#usage">Usage</a> |
-  <a href="#commands">Commands</a> |
   <a href="#example">Example</a>
 </p>
 &nbsp;
@@ -83,6 +82,9 @@ Pathfinder works with the [OpenAPI 3.0 Specification](https://swagger.io/specifi
 
 Create a new provider component with Pathfinder. Import `storage` and `openApiResolver` from the corresponding packages or create custom ones.
 
+> **Storage** is an object that implements Pathfinder data storage\
+> **Resolver** takes OpenAPI data and converts it to the PathFinder format
+
 ```jsx
 import { ReactNode } from 'react';
 import { Pathfinder } from '@kode-frontend/pathfinder-web-react';
@@ -96,8 +98,8 @@ type Props = {
 export const PathfinderProvider = ({ children }: Props) => {
   return (
     <Pathfinder
-      resolver={openApiResolver}
       storage={storage}
+      resolver={openApiResolver}
       active={process.env.NODE_ENV !== 'production'}
     >
       {children}
@@ -106,7 +108,7 @@ export const PathfinderProvider = ({ children }: Props) => {
 };
 ```
 
-Import `PathfinderProvider` and render it around your whole app.
+Import `PathfinderProvider` and render it around your whole app:
 
 ```jsx
 import { PathfinderProvider } from './pathfinder';
@@ -122,19 +124,31 @@ const App = () => {
 
 ## Usage
 
-Run your project.
+1. Run your project.
 
-During local development (`process.env.NODE_ENV !== 'production'`) you will see a button with gears in the bottom right of the screen. When clicking it the Pathfinder UI panel appears. You need to upload your [OpenAPI 3.0 Specification](https://swagger.io/specification/), then you can configure the base paths for all requests, as well as for each one individually.
+> During local development (`process.env.NODE_ENV !== 'production'`) you will see a button with gears in the bottom right of the screen. When clicking it the Pathfinder UI panel appears.
 
 <!-- TODO: добавить скрин с панелью -->
 
-### Local development
+2. Upload your [OpenAPI 3.0 Specification](https://swagger.io/specification/) file from [Stoplight](https://stoplight.io/).
+3. Configure the base paths for all requests or only for the required ones.
 
-Local development is divided into two parts (ideally using two tabs in your terminal).
+## Example
 
-[TSDX](https://tsdx.io/) scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
+Clone repository and install dependencies:
 
-The recommended workflow is to run TSDX in one terminal:
+```bash
+git clone https://github.com/appKODE/pathfinder-web-open-api.git
+
+npm i
+
+# or using yarn
+yarn
+```
+
+[TSDX](https://tsdx.io/) scaffolds Pathfinder inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
+
+The recommended workflow is to run TSDX in one tab of your terminal:
 
 ```bash
 npm start
@@ -145,21 +159,20 @@ yarn start
 
 This builds to `/dist` and runs the project in watch mode so any edits you save inside `/src` causes a rebuild to `/dist`.
 
-First, run rollup to watch your `src/` module and automatically recompile it into `dist/` whenever you make changes.
+Then run the example playground in another tab of your terminal:
 
 ```bash
-npm start # runs rollup with watch flag
-```
-
-Second, run the `example/` create-react-app that's linked to the local version of your module.
-
-```bash
-# (in another tab)
+# go to /example
 cd example
-npm start # runs create-react-app dev server
+
+# install dependencies and run create-react-app dev server
+npm i && npm start
+
+# or using yarn
+yarn && yarn start
 ```
 
-Now, anytime you make a change to your library in `src/` or to the example app's `example/src/`, create-react-app will live-reload your local dev server so you can iterate on your component in real-time.
+Now, anytime you make changes to your library in `/src` or to the example app's `/src`, `create-react-app` will live-reload your local dev server so you can iterate on your component in real-time.
 
 ## TODO
 
@@ -167,77 +180,6 @@ Now, anytime you make a change to your library in `src/` or to the example app's
 - [ ] add storybook
 - [ ] refactor components
 - [ ] add usage examples
-
-<br>
-
-## Commands
-
-TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
-
-The recommended workflow is to run TSDX in one terminal:
-
-```bash
-npm start
-
-# or using yarn
-yarn start
-```
-
-This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
-
-Then run either Storybook or the example playground:
-
-### Storybook
-
-Run inside another terminal:
-
-```bash
-yarn storybook
-```
-
-This loads the stories from `./stories`.
-
-> NOTE: Stories should reference the components as if using the library, similar to the example playground. This means importing from the root project directory. This has been aliased in the tsconfig and the storybook webpack config as a helper.
-
-### Example
-
-Then run the example inside another:
-
-```bash
-cd example
-npm i # or yarn to install dependencies
-npm start # or yarn start
-```
-
-The default example imports and live reloads whatever is in `/dist`, so if you are seeing an out of date component, make sure TSDX is running in watch mode like we recommend above. **No symlinking required**, we use [Parcel's aliasing](https://parceljs.org/module_resolution.html#aliases).
-
-To do a one-off build, use `npm run build` or `yarn build`.
-
-To run tests, use `npm test` or `yarn test`.
-
-## Configuration
-
-Code quality is set up for you with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
-
-### Jest
-
-Jest tests are set up to run with `npm test` or `yarn test`.
-
-### Bundle analysis
-
-Calculates the real cost of your library using [size-limit](https://github.com/ai/size-limit) with `npm run size` and visulize it with `npm run analyze`.
-
-#### React Testing Library
-
-We do not set up `react-testing-library` for you yet, we welcome contributions and documentation on this.
-
-### Rollup
-
-TSDX uses [Rollup](https://rollupjs.org) as a bundler and generates multiple rollup configs for various module formats and build settings. See [Optimizations](#optimizations) for details.
-
-### TypeScript
-
-`tsconfig.json` is set up to interpret `dom` and `esnext` types, as well as `react` for `jsx`. Adjust according to your needs.
 
 ## License
 
