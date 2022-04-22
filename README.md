@@ -1,40 +1,43 @@
-<h3 align="center">:construction: :construction: :construction: THIS PROJECT HAS AN EXPERIMENTAL STATUS, DON'T USE IT :construction: :construction: :construction:</h3>
+<div align="center">
+
+### :construction: :construction: :construction: THIS PROJECT HAS AN EXPERIMENTAL STATUS, DON'T USE IT :construction: :construction: :construction:
+
 &nbsp;
 
-<h1 align="center">@kode-frontend/pathfinder-web-react</h1>
+# @kode-frontend/pathfinder-web-react
 
-<div align="center">
   <a href="https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react">
-		<img alt="npm version" src="https://img.shields.io/npm/v/@kode-frontend/pathfinder-web-react.svg">
-	</a>
+    <img alt="npm version" src="https://img.shields.io/npm/v/@kode-frontend/pathfinder-web-react.svg">
+  </a>
   <a href="https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react">
-		<img alt="npm downloads" src="https://img.shields.io/npm/dt/@kode-frontend/pathfinder-web-react.svg">
-	</a>
+    <img alt="npm downloads" src="https://img.shields.io/npm/dt/@kode-frontend/pathfinder-web-react.svg">
+  </a>
   <a href="https://packagephobia.com/result?p=@kode-frontend/pathfinder-web-react">
-		<img alt="install size" src="https://packagephobia.com/badge?p=@kode-frontend/pathfinder-web-react">
-	</a>
+    <img alt="install size" src="https://packagephobia.com/badge?p=@kode-frontend/pathfinder-web-react">
+  </a>
   <a href="https://github.com/appKODE/pathfinder-web-react/blob/main/LICENSE">
-		<img alt="npm license" src="https://img.shields.io/npm/l/@kode-frontend/pathfinder-web-react.svg">
-	</a>
+    <img alt="npm license" src="https://img.shields.io/npm/l/@kode-frontend/pathfinder-web-react.svg">
+  </a>
   <a href="https://standardjs.com">
-		<img alt="standard js" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg">
-	</a>
+    <img alt="standard js" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg">
+  </a>
   <a href="https://reactjs.org/">
-		<img alt="react version" src="https://img.shields.io/badge/react->=16-green?style=flat&logo">
-	</a>
+    <img alt="react version" src="https://img.shields.io/badge/react->=16-green?style=flat&logo">
+  </a>
   <br>
   <a href="#">
-		<img alt="status" src="https://img.shields.io/badge/status-experimental-red?style=flat&logo">
-	</a>
-</div>
+    <img alt="status" src="https://img.shields.io/badge/status-experimental-red?style=flat&logo">
+  </a>
 
-<p align="center">
-  <a href="#installation">Installation</a> | 
-  <a href="#features">Features</a> |
-  <a href="#quickstart">Quickstart</a> |
-  <a href="#usage">Usage</a> |
-  <a href="#example">Example</a>
-</p>
+  <p>
+    <a href="#installation">Installation</a> | 
+    <a href="#features">Features</a> |
+    <a href="#quickstart">Quickstart</a> |
+    <a href="#usage">Usage</a> |
+    <a href="#example">Example</a>
+  </p>
+  
+</div>
 &nbsp;
 
 Pathfinder is a tool that allows to substitute the base URL for requests, helping with global error handling, testing, mocking, and more. This package provides a useful UI panel for easy HTTP requests manipulations on the client side.
