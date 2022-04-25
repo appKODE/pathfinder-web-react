@@ -1,35 +1,54 @@
-import React from 'react'
-import styles from './radio-group.module.css'
-import { TOption } from './types'
+import React from 'react';
+import styled from 'styled-components';
+
+import { TOption } from './types';
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+`;
+
+const Label = styled.label`
+  position: relative;
+  padding: 4px;
+  padding-left: 32px;
+  cursor: pointer;
+`;
+
+const RadioInput = styled.input`
+  position: absolute;
+  left: 0;
+  margin: 2px 8px;
+`;
 
 type TRadiogroupProps = {
-  items: TOption[]
-  id: string
-  onChange: (id: string, value: string) => void
-  value?: string
-}
+  items: TOption[];
+  id: string;
+  onChange: (id: string, value: string) => void;
+  value?: string;
+};
 
 export const RadioGroup = ({
   id,
   items,
   value,
-  onChange
+  onChange,
 }: TRadiogroupProps) => (
-  <div className={styles.group}>
+  <Wrapper>
     {items.map((item) => (
-      <label key={item.value} className={styles.label}>
-        <input
-          onChange={() => onChange(id, item.value)}
-          type='radio'
+      <Label key={item.value}>
+        <RadioInput
+          type="radio"
           name={id}
           value={item.value}
-          className={styles.input}
           checked={item.value === value}
+          onChange={() => onChange(id, item.value)}
         />
         {item.label}
-      </label>
+      </Label>
     ))}
-  </div>
-)
+  </Wrapper>
+);
 
-export default RadioGroup
+export default RadioGroup;
