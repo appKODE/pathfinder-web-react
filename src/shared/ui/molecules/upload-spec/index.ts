@@ -1,1 +1,1 @@
-import { UploadSpec } from './upload-spec';
+export { UploadSpec } from './upload-spec';

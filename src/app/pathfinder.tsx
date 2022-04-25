@@ -15,13 +15,12 @@ import {
 } from '@kode-frontend/pathfinder-web-core';
 import styled from 'styled-components';
 
-import { PanelButton } from '../shared/ui/atoms/panel-button/index';
-import { Panel } from '../shared/ui/organisms/panel/index';
+import { PanelButton } from '../shared/ui/atoms';
+import { Panel } from '../shared/ui/organisms';
+import { TPanelEnv, TPanelUrl } from '../shared/ui/organisms/panel/types';
 
 import { addConsoleActivation } from '../features/hidden-activation';
 import { useRequestInterception } from '../processes/request-interception';
-
-import { TPanelEnv, TPanelUrl } from '../shared/ui/organisms/panel/types';
 
 const ActionWrapper = styled.div`
   position: fixed;

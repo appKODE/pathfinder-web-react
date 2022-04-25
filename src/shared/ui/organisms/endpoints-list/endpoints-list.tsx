@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { UrlMethod } from '@kode-frontend/pathfinder-web-core';
 
-import { RadioGroup } from '../../molecules/radio-group';
+import { RadioGroup } from '../../molecules';
 import { TOption } from '../../molecules/radio-group/types';
 import { TUrlItem } from './types';
 

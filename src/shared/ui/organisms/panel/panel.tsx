@@ -1,10 +1,8 @@
 import React, { useMemo, useState } from 'react';
 import styled from 'styled-components';
 
-import { Header } from '../../molecules/header';
-import { EndpointsList } from '../../organisms/endpoints-list';
-import { UploadSpec } from '../../molecules/upload-spec/upload-spec';
-import { RadioGroup } from '../../molecules/radio-group';
+import { Header, UploadSpec, RadioGroup } from '../../molecules';
+import { EndpointsList } from '..';
 import { TOption } from '../../molecules/radio-group/types';
 import { TConfig } from './types';
 
