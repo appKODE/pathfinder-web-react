@@ -1,13 +1,7 @@
 import React, { memo, MouseEventHandler, ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
-type TButtonVariant = 'active' | 'transparent' | 'normal';
-
-type TButtonColors = {
-  background: string;
-  border: string;
-  text: string;
-};
+import { TButtonColors, TButtonVariant } from './types';
 
 const ButtonWrapper = styled.button<{
   $text: string;
