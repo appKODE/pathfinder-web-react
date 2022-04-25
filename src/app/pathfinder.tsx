@@ -19,8 +19,8 @@ import { PanelButton } from '../shared/ui/atoms';
 import { Panel } from '../shared/ui/organisms';
 import { TPanelEnv, TPanelUrl } from '../shared/ui/organisms/panel/types';
 
-import { addConsoleActivation } from '../features/hidden-activation';
-import { useRequestInterception } from '../processes/request-interception';
+import { addConsoleActivation } from '../features';
+import { useRequestInterception } from '../processes';
 
 const ActionWrapper = styled.div`
   position: fixed;
