@@ -5,10 +5,6 @@ import React, {
   useMemo,
   useState,
 } from 'react';
-import styles from './pathfinder.module.css';
-import { PanelButton } from '../shared/ui/atoms/panel-button/index';
-import { Panel } from '../shared/ui/organisms/panel/index';
-
 import {
   createPathFinder,
   DataResolver,
@@ -17,11 +13,57 @@ import {
   Spec,
   UrlSpec,
 } from '@kode-frontend/pathfinder-web-core';
+import styled from 'styled-components';
+
+import { PanelButton } from '../shared/ui/atoms/panel-button/index';
+import { Panel } from '../shared/ui/organisms/panel/index';
 
 import { addConsoleActivation } from '../features/hidden-activation';
 import { useRequestInterception } from '../processes/request-interception';
 
 import { TPanelEnv, TPanelUrl } from '../shared/ui/organisms/panel/types';
+
+const ActionWrapper = styled.div`
+  position: fixed;
+  right: 3px;
+  bottom: 3px;
+  z-index: 10;
+  width: 64px;
+  height: 64px;
+`;
+
+const Container = styled.div`
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+`;
+
+const Content = styled.div`
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 25;
+  padding: 16px;
+
+  * {
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+`;
 
 type PathfinderProviderProps = {
   children: JSX.Element;
@@ -97,14 +139,14 @@ export const Pathfinder = ({
 
   return (
     <Fragment>
-      <div className={styles.app}>{children}</div>
-      <div className={styles.action}>
+      <div>{children}</div>
+      <ActionWrapper>
         <PanelButton onClick={handleToggle} />
-      </div>
+      </ActionWrapper>
       {isOpen && (
-        <div className={styles.container}>
-          <div className={styles.overlay} />
-          <div className={styles.content}>
+        <Container>
+          <Overlay />
+          <Content>
             <Panel
               onLoadSpec={handleLoadSpec}
               config={config}
@@ -114,8 +156,8 @@ export const Pathfinder = ({
               onChangeUrlEnv={handleChangeUrlEnv}
               urlEnvInitialValues={initialUrlValues}
             />
-          </div>
-        </div>
+          </Content>
+        </Container>
       )}
     </Fragment>
   );
