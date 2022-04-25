@@ -1,34 +1,39 @@
-import React, { useMemo, useState } from 'react'
-import styles from './panel.module.css'
+import React, { useMemo, useState } from 'react';
+import styled from 'styled-components';
 
-import { Header } from '../../molecules/header'
-import { EndpointsList } from '../../organisms/endpoints-list'
-import { UploadSpec } from '../../molecules/upload-spec/upload-spec'
-import { RadioGroup } from '../../molecules/radio-group'
-import { TOption } from '../../molecules/radio-group/types'
+import { Header } from '../../molecules/header';
+import { EndpointsList } from '../../organisms/endpoints-list';
+import { UploadSpec } from '../../molecules/upload-spec/upload-spec';
+import { RadioGroup } from '../../molecules/radio-group';
+import { TOption } from '../../molecules/radio-group/types';
+import { TConfig } from './types';
 
-export type PanelEnv = { id: string; name: string }
-export type PanelUrl = {
-  id: string
-  method: string
-  template: string
-  name: string
-}
-export type Config = {
-  envList: PanelEnv[]
-  urlList: PanelUrl[]
-}
+const Wrapper = styled.div`
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 6px 12px;
+`;
+
+const DefaultControls = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+
+  td {
+    padding: 8px;
+  }
+`;
 
 type Props = {
-  config: Config
-  defaultEnvId: string
-  urlEnvInitialValues: Record<string, string>
+  config: TConfig;
+  defaultEnvId: string;
+  urlEnvInitialValues: Record<string, string>;
 
-  onClose: () => void
-  onChangeDefaultEnv: (envId: string | null) => void
-  onChangeUrlEnv: (urlId: string, envId?: string) => void
-  onLoadSpec: (data: unknown) => void
-}
+  onClose: () => void;
+  onChangeDefaultEnv: (envId: string | null) => void;
+  onChangeUrlEnv: (urlId: string, envId?: string) => void;
+  onLoadSpec: (data: unknown) => void;
+};
 
 export const Panel = ({
   config,
@@ -37,46 +42,46 @@ export const Panel = ({
   onChangeDefaultEnv,
   onChangeUrlEnv,
   onLoadSpec,
-  urlEnvInitialValues
+  urlEnvInitialValues,
 }: Props) => {
-  const [defaultEnv, setDefaultValue] = useState<string>(defaultEnvId || '')
+  const [defaultEnv, setDefaultValue] = useState<string>(defaultEnvId || '');
 
   const environments = useMemo<TOption[]>(
     () =>
       config.envList.map((env) => ({
         value: env.id,
-        label: env.name
+        label: env.name,
       })),
     [config]
-  )
+  );
 
   return (
-    <div className={styles.wrapper}>
+    <Wrapper>
       <Header onClose={onClose}>Pathfinder</Header>
       <UploadSpec onLoad={onLoadSpec} />
       {environments.length > 0 && (
-        <table className={styles.defaultControls}>
+        <DefaultControls>
           <tr>
-            <td>Использовать окружение для всех запросов:</td>
+            <td>Use the requests environment for all requests:</td>
             <td>
               <RadioGroup
-                onChange={(_, value) => {
-                  onChangeDefaultEnv(value || null)
-                  setDefaultValue(value)
-                }}
-                value={defaultEnv}
                 id={'default'}
+                value={defaultEnv}
+                onChange={(_, value) => {
+                  onChangeDefaultEnv(value || null);
+                  setDefaultValue(value);
+                }}
                 items={[
                   ...environments,
                   {
                     label: 'Default',
-                    value: ''
-                  }
+                    value: '',
+                  },
                 ]}
               />
             </td>
           </tr>
-        </table>
+        </DefaultControls>
       )}
       {config.urlList.length > 0 && (
         <EndpointsList
@@ -86,8 +91,8 @@ export const Panel = ({
           initialValues={urlEnvInitialValues}
         />
       )}
-    </div>
-  )
-}
+    </Wrapper>
+  );
+};
 
-export default Panel
+export default Panel;
