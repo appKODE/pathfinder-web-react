@@ -21,7 +21,7 @@ import {
 import { addConsoleActivation } from '../features/hidden-activation';
 import { useRequestInterception } from '../processes/request-interception';
 
-import { PanelEnv, PanelUrl } from '../shared/ui/organisms/panel/panel';
+import { TPanelEnv, TPanelUrl } from '../shared/ui/organisms/panel/types';
 
 type PathfinderProviderProps = {
   children: JSX.Element;
@@ -30,13 +30,16 @@ type PathfinderProviderProps = {
   active?: boolean;
 };
 
-const toPanelUrl = (url: UrlSpec): PanelUrl => ({
+const toPanelUrl = (url: UrlSpec): TPanelUrl => ({
   id: url.id,
   method: url.method,
   template: url.template,
   name: url.name,
 });
-const toPanelEnv = (env: EnvSpec): PanelEnv => ({ id: env.id, name: env.name });
+const toPanelEnv = (env: EnvSpec): TPanelEnv => ({
+  id: env.id,
+  name: env.name,
+});
 
 export const Pathfinder = ({
   children,

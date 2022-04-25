@@ -1,69 +1,119 @@
-import React from 'react'
-import { useState } from 'react'
-import styles from './endpoints-list.module.css'
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { UrlMethod } from '@kode-frontend/pathfinder-web-core';
 
-import { RadioGroup } from '../../molecules/radio-group'
-import { TOption } from '../../molecules/radio-group/types'
+import { RadioGroup } from '../../molecules/radio-group';
+import { TOption } from '../../molecules/radio-group/types';
+import { TUrlItem } from './types';
 
-export type UrlItem = {
-  id: string
-  method: string
-  template: string
-  name: string
-}
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+  width: 100%;
+  max-height: 80vh;
+  padding: 3px 6px;
+  box-sizing: border-box;
+  overflow: auto;
+`;
+
+const Table = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+
+  tr {
+    transition: 0.2s linear;
+
+    &:hover {
+      background: #eee;
+    }
+  }
+
+  tr td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+`;
+
+const Method = styled.span<{ $background: string }>`
+  font-size: 12px;
+  display: inline-block;
+  padding: 4px 8px;
+  color: #fff;
+  border-radius: 4px;
+  background-color: ${({ $background }) => $background};
+`;
+
+const EndpointName = styled.span`
+  display: block;
+  font-size: 14px;
+  color: #666;
+`;
 
 type Props = {
-  className?: string
-  environments: TOption[]
-  items: UrlItem[]
-  initialValues: Record<string, string>
-  onChange: (urlId: string, envId?: string) => void
-}
+  environments: TOption[];
+  items: TUrlItem[];
+  initialValues: Record<string, string>;
+  onChange: (urlId: string, envId?: string) => void;
+};
+
+const methodColor: Record<UrlMethod, string> = {
+  GET: 'green',
+  POST: 'blue',
+  DELETE: 'red',
+  PATCH: 'orange',
+  PUT: 'orange',
+  HEAD: '',
+  TRACE: '',
+  CONNECT: '',
+  OPTIONS: '',
+};
 
 export const EndpointsList = ({
   environments,
   items,
   initialValues,
-  onChange
+  onChange,
 }: Props) => {
-  const [values, setValues] = useState(initialValues)
+  const [values, setValues] = useState(initialValues);
 
   return (
-    <div className={styles.wrapper}>
-      <table className={styles.endpointsTable}>
+    <Wrapper>
+      <Table>
         {items.map((item) => (
           <tr key={item.id}>
             <td>
-              <span className={`${styles[item.method]} ${styles.method}`}>
+              <Method $background={methodColor[item.method]}>
                 {item.method}
-              </span>
+              </Method>
             </td>
             <td>
               {item.template}
-              <div className={styles.endpointName}>{item.name}</div>
+              <EndpointName>{item.name}</EndpointName>
             </td>
             <td>
               <RadioGroup
-                onChange={(id, value) => {
-                  onChange(id, value || undefined)
-                  setValues((prev) => ({ ...prev, [id]: value }))
-                }}
-                value={values[item.id]}
                 id={item.id}
+                value={values[item.id]}
+                onChange={(id, value) => {
+                  onChange(id, value || undefined);
+                  setValues((prev) => ({ ...prev, [id]: value }));
+                }}
                 items={[
                   ...environments,
                   {
                     label: 'Global',
-                    value: ''
-                  }
+                    value: '',
+                  },
                 ]}
               />
             </td>
           </tr>
         ))}
-      </table>
-    </div>
-  )
-}
+      </Table>
+    </Wrapper>
+  );
+};
 
-export default EndpointsList
+export default EndpointsList;
