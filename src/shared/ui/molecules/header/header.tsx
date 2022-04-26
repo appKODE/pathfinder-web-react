@@ -13,6 +13,7 @@ const Wrapper = styled.div`
 const Title = styled.h1`
   flex: 1 1 auto;
   margin: 0;
+  color: ${({ theme }) => theme.colors.main.dark.normal};
 `;
 
 const ActionWrapper = styled.div`

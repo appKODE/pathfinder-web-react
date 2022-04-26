@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { UrlMethod } from '@kode-frontend/pathfinder-web-core';
 
 import { RadioGroup } from '../../molecules';
@@ -26,13 +26,14 @@ const Table = styled.table`
     transition: 0.2s linear;
 
     &:hover {
-      background: #eee;
+      background: ${({ theme }) => theme.colors.decorative.light.normal};
     }
   }
 
   tr td {
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid
+      ${({ theme }) => theme.colors.decorative.medium.translucent};
   }
 `;
 
@@ -40,7 +41,7 @@ const Method = styled.span<{ $background: string }>`
   font-size: 12px;
   display: inline-block;
   padding: 4px 8px;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.main.light.normal};
   border-radius: 4px;
   background-color: ${({ $background }) => $background};
 `;
@@ -48,7 +49,7 @@ const Method = styled.span<{ $background: string }>`
 const EndpointName = styled.span`
   display: block;
   font-size: 14px;
-  color: #666;
+  color: ${({ theme }) => theme.colors.decorative.medium.normal};
 `;
 
 type Props = {
@@ -58,25 +59,26 @@ type Props = {
   onChange: (urlId: string, envId?: string) => void;
 };
 
-const methodColor: Record<UrlMethod, string> = {
-  GET: 'green',
-  POST: 'blue',
-  DELETE: 'red',
-  PATCH: 'orange',
-  PUT: 'orange',
-  HEAD: '',
-  TRACE: '',
-  CONNECT: '',
-  OPTIONS: '',
-};
-
 export const EndpointsList = ({
   environments,
   items,
   initialValues,
   onChange,
 }: Props) => {
+  const theme = useTheme();
   const [values, setValues] = useState(initialValues);
+
+  const methodColor: Record<UrlMethod, string> = {
+    GET: theme.colors.digital.green.normal,
+    POST: theme.colors.digital.blue.normal,
+    DELETE: theme.colors.digital.red.normal,
+    PUT: theme.colors.digital.orange.normal,
+    PATCH: theme.colors.digital.orange.normal,
+    HEAD: theme.colors.digital.violet.normal,
+    TRACE: theme.colors.digital.violet.normal,
+    CONNECT: theme.colors.digital.violet.normal,
+    OPTIONS: theme.colors.digital.violet.normal,
+  };
 
   return (
     <Wrapper>

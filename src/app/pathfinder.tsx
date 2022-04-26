@@ -62,7 +62,8 @@ const Overlay = styled.div`
   z-index: 20;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: ${({ theme }) => theme.colors.decorative.dark.translucent};
+  backdrop-filter: blur(3px);
 `;
 
 type PathfinderProviderProps = {

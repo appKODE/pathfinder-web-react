@@ -1,5 +1,5 @@
 import React, { memo, MouseEventHandler, ReactNode } from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, useTheme } from 'styled-components';
 
 import { TButtonColors, TButtonVariant } from './types';
 
@@ -21,10 +21,6 @@ const ButtonWrapper = styled.button<{
   transition: 0.2s linear;
   cursor: pointer;
 
-  &:hover {
-    background-color: rgba(144, 202, 249, 0.6);
-  }
-
   ${({ $active, $background }) =>
     $active &&
     css`
@@ -33,24 +29,6 @@ const ButtonWrapper = styled.button<{
       }
     `}
 `;
-
-const colors: Record<TButtonVariant, TButtonColors> = {
-  active: {
-    background: '#282c34',
-    border: '#333',
-    text: '#fff',
-  },
-  transparent: {
-    background: 'transparent',
-    border: 'transparent',
-    text: 'rgba(51, 51, 51, 0.85)',
-  },
-  normal: {
-    background: '#90caf9',
-    border: '#333',
-    text: 'rgba(51, 51, 51, 0.85)',
-  },
-};
 
 type Props = {
   children: ReactNode;
@@ -61,11 +39,30 @@ type Props = {
 
 export const Button = memo(
   ({ children, transparent, active, onClick }: Props) => {
+    const theme = useTheme();
     const variant: TButtonVariant = active
       ? 'active'
       : transparent
       ? 'transparent'
       : 'normal';
+
+    const colors: Record<TButtonVariant, TButtonColors> = {
+      active: {
+        background: theme.colors.main.secondary.normal,
+        border: theme.colors.main.dark.normal,
+        text: theme.colors.main.light.normal,
+      },
+      transparent: {
+        background: 'transparent',
+        border: 'transparent',
+        text: theme.colors.main.dark.translucent,
+      },
+      normal: {
+        background: theme.colors.main.primary.normal,
+        border: theme.colors.main.dark.normal,
+        text: theme.colors.main.dark.translucent,
+      },
+    };
 
     return (
       <ButtonWrapper
