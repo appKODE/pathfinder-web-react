@@ -13,8 +13,9 @@ import {
   Spec,
   UrlSpec,
 } from '@kode-frontend/pathfinder-web-core';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
+import { theme } from '../ui/theme';
 import { PanelButton } from '../shared/ui/atoms';
 import { Panel } from '../shared/ui/organisms';
 import { TPanelEnv, TPanelUrl } from '../shared/ui/organisms/panel/types';
@@ -137,7 +138,7 @@ export const Pathfinder = ({
   });
 
   return (
-    <Fragment>
+    <ThemeProvider theme={theme}>
       <div>{children}</div>
       <ActionWrapper>
         <PanelButton onClick={handleToggle} />
@@ -158,6 +159,6 @@ export const Pathfinder = ({
           </Content>
         </Container>
       )}
-    </Fragment>
+    </ThemeProvider>
   );
 };
