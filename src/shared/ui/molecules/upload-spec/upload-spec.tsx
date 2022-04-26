@@ -5,13 +5,13 @@ const Wrapper = styled.label`
   display: inline-block;
   margin: 8px;
   padding: 8px 16px;
-  color: blue;
+  color: ${({ theme }) => theme.colors.digital.blue.normal};
   border-radius: 4px;
   transition: 0.2s linear;
   cursor: pointer;
 
   &:hover {
-    background: #ddd;
+    background: ${({ theme }) => theme.colors.decorative.light.normal};
   }
 `;
 

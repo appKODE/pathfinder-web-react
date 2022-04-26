@@ -5,17 +5,21 @@ const Button = styled.button`
   appearance: none;
   width: 32px;
   height: 32px;
-  border: 1px solid #333;
+  border: 1px solid ${({ theme }) => theme.colors.main.dark.normal};
   border-radius: 100%;
   transition: 0.2s linear;
   cursor: pointer;
 
-  &:hover {
-    background-color: #333333;
+  svg path {
+    transition: 0.2s linear;
   }
 
-  &:hover svg path {
-    fill: #eee;
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.main.dark.normal};
+
+    svg path {
+      fill: ${({ theme }) => theme.colors.decorative.light.normal};
+    }
   }
 `;
 

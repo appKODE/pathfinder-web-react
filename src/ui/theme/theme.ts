@@ -11,11 +11,11 @@ export const theme = {
     },
     decorative: {
       light: { normal: '#eee', translucent: '' },
-      medium: { normal: '#666', translucent: '' },
+      medium: { normal: '#666', translucent: '#ddd' },
       dark: { normal: '#2A2A2A', translucent: 'rgba(42, 42, 42, 0.4)' },
     },
     digital: {
-      green: { normal: '#00cc88', translucent: '' },
+      green: { normal: '#48bb78', translucent: '' },
       yellow: { normal: '#f9e15a', translucent: '' },
       orange: { normal: '#ff9d00', translucent: '' },
       violet: { normal: '#5854A4', translucent: '' },
