@@ -7,6 +7,7 @@ import { TOption } from '../../molecules/radio-group/types';
 import { TConfig } from './types';
 
 const Wrapper = styled.div`
+  max-height: 95vh;
   background-color: ${({ theme }) => theme.colors.main.light.normal};
   border-radius: 4px;
   overflow: hidden;
