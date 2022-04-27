@@ -1,7 +1,8 @@
 import React, { memo, MouseEventHandler, ReactNode } from 'react';
 import styled from 'styled-components';
 
-import { Button, CloseIcon } from '../../atoms';
+import { CloseIcon } from '../../icons';
+import { Button } from '../../atoms';
 
 const Wrapper = styled.div`
   display: flex;
