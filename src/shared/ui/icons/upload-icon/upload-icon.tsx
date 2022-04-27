@@ -1,16 +1,15 @@
 import React from 'react';
 
 type Props = {
-  width?: number;
-  height?: number;
+  size?: number;
 };
 
-export const UploadIcon = ({ width = 24, height = 24 }: Props) => {
+export const UploadIcon = ({ size = 24 }: Props) => {
   return (
     <svg
       baseProfile="tiny"
-      height={height}
-      width={width}
+      height={size}
+      width={size}
       xmlSpace="preserve"
       viewBox="0 0 24 24"
     >

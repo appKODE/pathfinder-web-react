@@ -5,7 +5,7 @@ type Props = {
   color?: string;
 };
 
-export const AddIcon = ({ size = 24, color = '#333' }: Props) => {
+export const AddIcon = ({ size = 16, color = '#333' }: Props) => {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
       <path

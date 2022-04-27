@@ -15,10 +15,11 @@ const ButtonWrapper = styled.button<{
   display: flex;
   align-content: center;
   justify-content: center;
+  outline: none;
   border: 1px solid ${({ $border }) => $border};
   background-color: ${({ $background }) => $background};
   color: ${({ $text }) => $text};
-  transition: 0.2s linear;
+  transition: 0.3s ease;
   cursor: pointer;
 
   ${({ $active, $background }) =>
@@ -28,6 +29,10 @@ const ButtonWrapper = styled.button<{
         background-color: ${$background};
       }
     `}
+
+  &:active {
+    transform: scale(0.96);
+  }
 `;
 
 type Props = {

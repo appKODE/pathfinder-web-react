@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react';
 import styled from 'styled-components';
 
-import { AddIcon } from '../../atoms';
+import { AddIcon } from '../../icons';
 
 const Text = styled.span`
   position: relative;
