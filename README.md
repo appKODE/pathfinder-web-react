@@ -1,31 +1,74 @@
-<h3 align="center">:construction: :construction: :construction: THIS PROJECT HAS AN EXPERIMENTAL STATUS, DON'T USE IT :construction: :construction: :construction:</h3>
+<div align="center">
+
+### :construction: :construction: :construction: THIS PROJECT HAS AN EXPERIMENTAL STATUS, DON'T USE IT :construction: :construction: :construction:
+
 &nbsp;
 
 # @kode-frontend/pathfinder-web-react
 
-[![npm](https://img.shields.io/npm/v/@kode-frontend/pathfinder-web-react.svg)](https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react)
-[![npm](https://img.shields.io/npm/dt/@kode-frontend/pathfinder-web-react.svg)](https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react)
-[![npm](https://img.shields.io/npm/l/@kode-frontend/pathfinder-web-react.svg)](https://github.com/appKODE/pathfinder-web-react/blob/main/LICENSE)
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![status](https://img.shields.io/badge/status-experimental-red?style=flat&logo)](#)
+  <a href="https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react">
+    <img alt="npm version" src="https://img.shields.io/npm/v/@kode-frontend/pathfinder-web-react.svg">
+  </a>
+  <a href="https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react">
+    <img alt="npm downloads" src="https://img.shields.io/npm/dt/@kode-frontend/pathfinder-web-react.svg">
+  </a>
+  <a href="https://packagephobia.com/result?p=@kode-frontend/pathfinder-web-react">
+    <img alt="install size" src="https://packagephobia.com/badge?p=@kode-frontend/pathfinder-web-react">
+  </a>
+  <a href="https://github.com/appKODE/pathfinder-web-react/blob/main/LICENSE">
+    <img alt="npm license" src="https://img.shields.io/npm/l/@kode-frontend/pathfinder-web-react.svg">
+  </a>
+  <a href="https://standardjs.com">
+    <img alt="standard js" src="https://img.shields.io/badge/code_style-standard-brightgreen.svg">
+  </a>
+  <a href="https://reactjs.org/">
+    <img alt="react version" src="https://img.shields.io/badge/react->=16-green?style=flat&logo">
+  </a>
+  <br>
+  <a href="#">
+    <img alt="status" src="https://img.shields.io/badge/status-experimental-red?style=flat&logo">
+  </a>
 
-Pathfinder is a tool that allows to substitute the base URL for requests.
+  <p>
+    <a href="#installation">Installation</a> | 
+    <a href="#features">Features</a> |
+    <a href="#quickstart">Quickstart</a> |
+    <a href="#usage">Usage</a> |
+    <a href="#example">Example</a>
+  </p>
+  
+</div>
+&nbsp;
+
+Pathfinder is a tool that allows to substitute the base URL for requests, helping with global error handling, testing, mocking, and more. This package provides a useful UI panel for easy HTTP requests manipulations on the client side.
 
 ## Installation
 
 ```bash
-npm install --save @kode-frontend/pathfinder-web-react
-```
+npm i @kode-frontend/pathfinder-web-react
 
-or
-
-```bash
+# or using yarn
 yarn add @kode-frontend/pathfinder-web-react
 ```
 
+Pathfinder is intended to be paired with a storage adapter and an OpenAPI resolver, which can be fully customized or installed as npm packages.
+
+We recommend using special libraries for integrating Pathfinder into your application. They are easy to integrate into an existing project and do not require any further development.
+
+Save as dependencies\* :
+
+```bash
+npm i @kode-frontend/pathfinder-web-local-storage @kode-frontend/pathfinder-web-open-api
+
+# or using yarn
+yarn add @kode-frontend/pathfinder-web-local-storage @kode-frontend/pathfinder-web-open-api
+```
+
+_\*You can read more about [pathfinder-web-local-storage](https://www.npmjs.com/package/@kode-frontend/pathfinder-web-local-storage) and [pathfinder-web-open-api](https://www.npmjs.com/package/@kode-frontend/pathfinder-web-open-api) on their pages._
+
 ## Introduction
 
-There are cases in which it is useful to monitor or manipulate HTTP requests, instead of letting it happen as is. Pathfinder is a tool that allows to configure the base path for an API on the client side, both for all requests and for each one separately. It provides an UI panel, which enables to interactively change the requests environment in accordance with an uploaded OpenAPI config.
+There are cases in which it is useful to monitor or manipulate HTTP requests, instead of letting it happen as is. Pathfinder is a tool that allows to configure the base path for an API on the client side, both for all requests and for each one separately. It provides a UI panel, which enables to interactively change the requests environment in accordance with an uploaded OpenAPI config.
 
 Pathfinder works with the [OpenAPI 3.0 Specification](https://swagger.io/specification/), which can be exported from [Stoplight](https://stoplight.io/).
 
@@ -38,25 +81,101 @@ Pathfinder works with the [OpenAPI 3.0 Specification](https://swagger.io/specifi
 - **Uploading and updating data from an OpenAPI config:**\
    updates environment lists and paths on the spot by uploading an OpenAPI config.
 
+## Quickstart
+
+Create a new provider component with Pathfinder. Import `storage` and `openApiResolver` from the corresponding packages or create custom ones.
+
+> **Storage** is an object that implements Pathfinder data storage\
+> **Resolver** takes OpenAPI data and converts it to the PathFinder format
+
+```jsx
+import { ReactNode } from 'react';
+import { Pathfinder } from '@kode-frontend/pathfinder-web-react';
+import { storage } from '@kode-frontend/pathfinder-web-local-storage';
+import { openApiResolver } from '@kode-frontend/pathfinder-web-open-api';
+
+type Props = {
+  children: ReactNode,
+};
+
+export const PathfinderProvider = ({ children }: Props) => {
+  return (
+    <Pathfinder
+      storage={storage}
+      resolver={openApiResolver}
+      active={process.env.NODE_ENV !== 'production'}
+    >
+      {children}
+    </Pathfinder>
+  );
+};
+```
+
+Import `PathfinderProvider` and render it around your whole app:
+
+```jsx
+import { PathfinderProvider } from './pathfinder';
+
+const App = () => {
+  return (
+    <PathfinderProvider>
+      <div>your app</div>
+    </PathfinderProvider>
+  );
+};
+```
+
 ## Usage
 
-Local development is divided into two parts (ideally using two tabs in your terminal).
+1. Run your project.
 
-First, run rollup to watch your `src/` module and automatically recompile it into `dist/` whenever you make changes.
+> During local development (`process.env.NODE_ENV !== 'production'`) you will see a button with gears in the bottom right of the screen. When clicking it the Pathfinder UI panel appears.
+
+<!-- TODO: добавить скрин с панелью -->
+
+2. Upload your [OpenAPI 3.0 Specification](https://swagger.io/specification/) file from [Stoplight](https://stoplight.io/).
+3. Configure the base paths for all requests or only for the required ones.
+
+## Example
+
+Clone repository and install dependencies:
 
 ```bash
-npm start # runs rollup with watch flag
+git clone https://github.com/appKODE/pathfinder-web-open-api.git
+
+npm i
+
+# or using yarn
+yarn
 ```
 
-Second, run the `example/` create-react-app that's linked to the local version of your module.
+[TSDX](https://tsdx.io/) scaffolds Pathfinder inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
+
+The recommended workflow is to run TSDX in one tab of your terminal:
 
 ```bash
-# (in another tab)
+npm start
+
+# or using yarn
+yarn start
+```
+
+This builds to `/dist` and runs the project in watch mode so any edits you save inside `/src` causes a rebuild to `/dist`.
+
+Then run the example playground in another tab of your terminal:
+
+```bash
+# go to /example
 cd example
-npm start # runs create-react-app dev server
+
+# install dependencies and run create-react-app dev server
+npm i && npm start
+
+# or using yarn
+yarn && yarn start
 ```
 
-Now, anytime you make a change to your library in `src/` or to the example app's `example/src/`, create-react-app will live-reload your local dev server so you can iterate on your component in real-time.
+Now, anytime you make changes to your library in `/src` or to the example app's `/src`, `create-react-app` will live-reload your local dev server so you can iterate on your component in real-time.
 
 ## TODO
 
@@ -68,152 +187,3 @@ Now, anytime you make a change to your library in `src/` or to the example app's
 ## License
 
 [MIT ©](https://github.com/appKODE/pathfinder-web-react/LICENCE)
-
-## Commands
-
-TSDX scaffolds your new library inside `/src`, and also sets up a [Parcel-based](https://parceljs.org) playground for it inside `/example`.
-
-The recommended workflow is to run TSDX in one terminal:
-
-```bash
-npm start # or yarn start
-```
-
-This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
-
-Then run either Storybook or the example playground:
-
-### Storybook
-
-Run inside another terminal:
-
-```bash
-yarn storybook
-```
-
-This loads the stories from `./stories`.
-
-> NOTE: Stories should reference the components as if using the library, similar to the example playground. This means importing from the root project directory. This has been aliased in the tsconfig and the storybook webpack config as a helper.
-
-### Example
-
-Then run the example inside another:
-
-```bash
-cd example
-npm i # or yarn to install dependencies
-npm start # or yarn start
-```
-
-The default example imports and live reloads whatever is in `/dist`, so if you are seeing an out of date component, make sure TSDX is running in watch mode like we recommend above. **No symlinking required**, we use [Parcel's aliasing](https://parceljs.org/module_resolution.html#aliases).
-
-To do a one-off build, use `npm run build` or `yarn build`.
-
-To run tests, use `npm test` or `yarn test`.
-
-## Configuration
-
-Code quality is set up for you with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
-
-### Jest
-
-Jest tests are set up to run with `npm test` or `yarn test`.
-
-### Bundle analysis
-
-Calculates the real cost of your library using [size-limit](https://github.com/ai/size-limit) with `npm run size` and visulize it with `npm run analyze`.
-
-#### React Testing Library
-
-We do not set up `react-testing-library` for you yet, we welcome contributions and documentation on this.
-
-### Rollup
-
-TSDX uses [Rollup](https://rollupjs.org) as a bundler and generates multiple rollup configs for various module formats and build settings. See [Optimizations](#optimizations) for details.
-
-### TypeScript
-
-`tsconfig.json` is set up to interpret `dom` and `esnext` types, as well as `react` for `jsx`. Adjust according to your needs.
-
-## Continuous Integration
-
-### GitHub Actions
-
-Two actions are added by default:
-
-- `main` which installs deps w/ cache, lints, tests, and builds on all pushes against a Node and OS matrix
-- `size` which comments cost comparison of your library on every pull request using [size-limit](https://github.com/ai/size-limit)
-
-## Optimizations
-
-Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
-
-```js
-// ./types/index.d.ts
-declare var __DEV__: boolean;
-
-// inside your code...
-if (__DEV__) {
-  console.log('foo');
-}
-```
-
-You can also choose to install and use [invariant](https://github.com/palmerhq/tsdx#invariant) and [warning](https://github.com/palmerhq/tsdx#warning) functions.
-
-## Module Formats
-
-CJS, ESModules, and UMD module formats are supported.
-
-The appropriate paths are configured in `package.json` and `dist/index.js` accordingly. Please report if any issues are found.
-
-## Deploying the Example Playground
-
-The Playground is just a simple [Parcel](https://parceljs.org) app, you can deploy it anywhere you would normally deploy that. Here are some guidelines for **manually** deploying with the Netlify CLI (`npm i -g netlify-cli`):
-
-```bash
-cd example # if not already in the example folder
-npm run build # builds to dist
-netlify deploy # deploy the dist folder
-```
-
-Alternatively, if you already have a git repo connected, you can set up continuous deployment with Netlify:
-
-```bash
-netlify init
-# build command: yarn build && cd example && yarn && yarn build
-# directory to deploy: example/dist
-# pick yes for netlify.toml
-```
-
-## Named Exports
-
-Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
-
-## Including Styles
-
-There are many ways to ship styles, including with CSS-in-JS. TSDX has no opinion on this, configure how you like.
-
-For vanilla CSS, you can include it at the root directory and add it to the `files` section in your `package.json`, so that it can be imported separately by your users and run through their bundler's loader.
-
-## Publishing to NPM
-
-We recommend using [np](https://github.com/sindresorhus/np).
-
-## Usage with Lerna
-
-When creating a new package with TSDX within a project set up with Lerna, you might encounter a `Cannot resolve dependency` error when trying to run the `example` project. To fix that you will need to make changes to the `package.json` file _inside the `example` directory_.
-
-The problem is that due to the nature of how dependencies are installed in Lerna projects, the aliases in the example project's `package.json` might not point to the right place, as those dependencies might have been installed in the root of your Lerna project.
-
-Change the `alias` to point to where those packages are actually installed. This depends on the directory structure of your Lerna project, so the actual path might be different from the diff below.
-
-```diff
-   "alias": {
--    "react": "../node_modules/react",
--    "react-dom": "../node_modules/react-dom"
-+    "react": "../../../node_modules/react",
-+    "react-dom": "../../../node_modules/react-dom"
-   },
-```
-
-An alternative to fixing this problem would be to remove aliases altogether and define the dependencies referenced as aliases as dev dependencies instead. [However, that might cause other problems.](https://github.com/palmerhq/tsdx/issues/64)
