@@ -11,6 +11,7 @@ const Text = styled.span`
   gap: 8px;
   font-size: 14px;
   text-transform: uppercase;
+  white-space: nowrap;
 
   svg {
     transform: translateX(-4px);

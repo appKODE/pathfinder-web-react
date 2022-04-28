@@ -2,34 +2,10 @@ import React, { useState } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { UrlMethod } from '@kode-frontend/pathfinder-web-core';
 
+import { ScrollWrapper } from '../../atoms';
 import { RadioGroup } from '../../molecules';
 import { TRadioOptions } from '../../atoms/radio-input/types';
 import { TUrlItem } from './types';
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: start;
-  width: 100%;
-  max-height: 75vh;
-  padding: 3px 6px;
-  box-sizing: border-box;
-  overflow: auto;
-  scrollbar-width: thin;
-  scrollbar-color: ${({ theme }) => theme.colors.decorative.medium.translucent}
-    transparent;
-
-  &::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) =>
-      theme.colors.decorative.medium.translucent};
-    border-radius: 4px;
-  }
-`;
 
 const Table = styled.table`
   width: 100%;
@@ -94,7 +70,7 @@ export const EndpointsList = ({
   };
 
   return (
-    <Wrapper>
+    <ScrollWrapper>
       <Table>
         {items.map((item) => (
           <tr key={item.id}>
@@ -127,8 +103,6 @@ export const EndpointsList = ({
           </tr>
         ))}
       </Table>
-    </Wrapper>
+    </ScrollWrapper>
   );
 };
-
-export default EndpointsList;
