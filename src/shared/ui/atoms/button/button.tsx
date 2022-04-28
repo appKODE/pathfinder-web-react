@@ -38,6 +38,16 @@ const ButtonWrapper = styled.button<{
   &:active {
     transform: scale(0.96);
   }
+
+  svg path {
+    transition: 0.2s linear;
+  }
+
+  &:hover {
+    svg path {
+      opacity: 0.8;
+    }
+  }
 `;
 
 type Props = {
@@ -89,5 +99,3 @@ export const Button = memo(
     );
   }
 );
-
-export default Button;
