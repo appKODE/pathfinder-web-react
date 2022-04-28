@@ -31,7 +31,7 @@ const ButtonWrapper = styled.button<{
       }
     `}
 
-  &:focus {
+  &:focus:not(:active) {
     outline: 1px solid ${({ theme }) => theme.colors.digital.blue.normal};
   }
 
