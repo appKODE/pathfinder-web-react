@@ -11,7 +11,6 @@ const Text = styled.span`
   gap: 8px;
   font-size: 14px;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.main.dark.normal};
 
   svg {
     transform: translateX(-4px);

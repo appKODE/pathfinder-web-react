@@ -3,11 +3,10 @@ import styled from 'styled-components';
 
 import { Header, UploadSpec, RadioGroup } from '../../molecules';
 import { EndpointsList } from '..';
-import { TOption } from '../../molecules/radio-group/types';
+import { TRadioOptions } from '../../atoms/radio-input/types';
 import { TConfig } from './types';
 
 const Wrapper = styled.div`
-  max-height: 95vh;
   background-color: ${({ theme }) => theme.colors.main.light.normal};
   border-radius: 4px;
   overflow: hidden;
@@ -45,7 +44,7 @@ export const Panel = ({
 }: Props) => {
   const [defaultEnv, setDefaultValue] = useState<string>(defaultEnvId || '');
 
-  const environments = useMemo<TOption[]>(
+  const environments = useMemo<TRadioOptions[]>(
     () =>
       config.envList.map((env) => ({
         value: env.id,

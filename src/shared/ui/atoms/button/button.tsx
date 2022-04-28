@@ -17,6 +17,7 @@ const ButtonWrapper = styled.button<{
   justify-content: center;
   outline: none;
   border: 1px solid ${({ $border }) => $border};
+  border-radius: 4px;
   background-color: ${({ $background }) => $background};
   color: ${({ $text }) => $text};
   transition: 0.3s ease;
@@ -30,6 +31,10 @@ const ButtonWrapper = styled.button<{
       }
     `}
 
+  &:focus {
+    outline: 1px solid ${({ theme }) => theme.colors.digital.blue.normal};
+  }
+
   &:active {
     transform: scale(0.96);
   }
@@ -37,13 +42,14 @@ const ButtonWrapper = styled.button<{
 
 type Props = {
   children: ReactNode;
+  title?: string;
   transparent?: boolean;
   active?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
 export const Button = memo(
-  ({ children, transparent, active, onClick }: Props) => {
+  ({ children, title, transparent, active, onClick }: Props) => {
     const theme = useTheme();
     const variant: TButtonVariant = active
       ? 'active'
@@ -76,6 +82,7 @@ export const Button = memo(
         $border={colors[variant].border}
         $active={active}
         onClick={onClick}
+        title={title}
       >
         {children}
       </ButtonWrapper>

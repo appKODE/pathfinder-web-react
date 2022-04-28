@@ -1,5 +1,5 @@
 import React, { memo, MouseEventHandler, ReactNode } from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 
 import { CloseIcon } from '../../icons';
 import { Button } from '../../atoms';
@@ -14,7 +14,6 @@ const Wrapper = styled.div`
 const Title = styled.h1`
   flex: 1 1 auto;
   margin: 0;
-  color: ${({ theme }) => theme.colors.main.dark.normal};
 `;
 
 const ActionWrapper = styled.div`
@@ -29,15 +28,23 @@ type Props = {
   onClose: MouseEventHandler<HTMLButtonElement>;
 };
 
-export const Header = memo(({ children, onClose }: Props) => (
-  <Wrapper>
-    <Title>{children}</Title>
-    <ActionWrapper>
-      <Button onClick={onClose} transparent>
-        <CloseIcon width={16} height={16} />
-      </Button>
-    </ActionWrapper>
-  </Wrapper>
-));
+export const Header = memo(({ children, onClose }: Props) => {
+  const theme = useTheme();
+
+  return (
+    <Wrapper>
+      <Title>{children}</Title>
+      <ActionWrapper>
+        <Button onClick={onClose} transparent title={'Close'}>
+          <CloseIcon
+            width={16}
+            height={16}
+            fill={theme.colors.main.dark.normal}
+          />
+        </Button>
+      </ActionWrapper>
+    </Wrapper>
+  );
+});
 
 export default Header;
