@@ -77,6 +77,7 @@ export const Panel = ({
                 <RadioGroup
                   id={'default'}
                   value={defaultEnv}
+                  color={'red'}
                   onChange={(_, value) => {
                     onChangeDefaultEnv(value || null);
                     setDefaultValue(value);
