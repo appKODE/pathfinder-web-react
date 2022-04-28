@@ -20,7 +20,7 @@ export const theme = {
       orange: { normal: '#ff9d00', translucent: '' },
       violet: { normal: '#5854A4', translucent: '' },
       blue: { normal: '#6699CC', translucent: 'rgba(102, 153, 204, 0.5)' },
-      red: { normal: '#E15A60', translucent: '' },
+      red: { normal: '#E15A60', translucent: 'rgba(225, 90, 96, 0.5)' },
     },
   },
 };

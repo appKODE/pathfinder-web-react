@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { RadioInput } from '../../atoms';
-import { TRadioOptions } from '../../atoms/radio-input/types';
+import { TDigitalColors, TRadioOptions } from '../../atoms/radio-input/types';
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,12 +15,14 @@ type TRadiogroupProps = {
   items: TRadioOptions[];
   onChange: (id: string, value: string) => void;
   value?: string;
+  color?: TDigitalColors;
 };
 
 export const RadioGroup = ({
   id,
   items,
   value,
+  color,
   onChange,
 }: TRadiogroupProps) => (
   <Wrapper>
@@ -30,6 +32,7 @@ export const RadioGroup = ({
         id={id}
         value={item.value}
         label={item.label}
+        color={color}
         isChecked={item.value === value}
         onChange={() => onChange(id, item.value)}
       />
