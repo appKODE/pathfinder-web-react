@@ -7,6 +7,7 @@ const VisibleRadio = styled.span`
   position: relative;
   display: block;
   width: 14px;
+  min-width: 14px;
   height: 14px;
   border-radius: 100%;
   border: 1px solid ${({ theme }) => theme.colors.decorative.medium.normal};
