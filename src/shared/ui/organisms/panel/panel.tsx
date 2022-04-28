@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import styled from 'styled-components';
 
+import { ScrollWrapper } from '../../atoms';
 import { Header, UploadSpec, RadioGroup } from '../../molecules';
 import { EndpointsList } from '..';
 import { TRadioOptions } from '../../atoms/radio-input/types';
@@ -20,6 +21,14 @@ const DefaultControls = styled.table`
   td {
     padding: 8px;
   }
+`;
+
+const Text = styled.span`
+  display: block;
+  min-width: 300px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
 `;
 
 type Props = {
@@ -58,28 +67,32 @@ export const Panel = ({
       <Header onClose={onClose}>Pathfinder</Header>
       <UploadSpec onLoad={onLoadSpec} />
       {environments.length > 0 && (
-        <DefaultControls>
-          <tr>
-            <td>Use the requests environment for all requests:</td>
-            <td>
-              <RadioGroup
-                id={'default'}
-                value={defaultEnv}
-                onChange={(_, value) => {
-                  onChangeDefaultEnv(value || null);
-                  setDefaultValue(value);
-                }}
-                items={[
-                  ...environments,
-                  {
-                    label: 'Default',
-                    value: '',
-                  },
-                ]}
-              />
-            </td>
-          </tr>
-        </DefaultControls>
+        <ScrollWrapper>
+          <DefaultControls>
+            <tr>
+              <td>
+                <Text>Use the requests environment for all requests:</Text>
+              </td>
+              <td>
+                <RadioGroup
+                  id={'default'}
+                  value={defaultEnv}
+                  onChange={(_, value) => {
+                    onChangeDefaultEnv(value || null);
+                    setDefaultValue(value);
+                  }}
+                  items={[
+                    ...environments,
+                    {
+                      label: 'Default',
+                      value: '',
+                    },
+                  ]}
+                />
+              </td>
+            </tr>
+          </DefaultControls>
+        </ScrollWrapper>
       )}
       {config.urlList.length > 0 && (
         <EndpointsList
@@ -92,5 +105,3 @@ export const Panel = ({
     </Wrapper>
   );
 };
-
-export default Panel;
