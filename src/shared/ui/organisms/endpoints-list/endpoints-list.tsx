@@ -16,18 +16,19 @@ const Wrapper = styled.div`
   padding: 3px 6px;
   box-sizing: border-box;
   overflow: auto;
-  /* scrollbar-width: thin;
-  scrollbar-color: ${({ theme }) => theme.colors.decorative.medium.normal}
+  scrollbar-width: thin;
+  scrollbar-color: ${({ theme }) => theme.colors.decorative.medium.translucent}
     transparent;
 
   &::-webkit-scrollbar {
-    width: 3px;
+    width: 4px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors.decorative.medium.normal};
-    border-radius: 3px;
-  } */
+    background-color: ${({ theme }) =>
+      theme.colors.decorative.medium.translucent};
+    border-radius: 4px;
+  }
 `;
 
 const Table = styled.table`
