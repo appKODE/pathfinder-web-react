@@ -1,4 +1,4 @@
-export type TOption = {
+export type TRadioOptions = {
   label: string;
   value: string;
 };

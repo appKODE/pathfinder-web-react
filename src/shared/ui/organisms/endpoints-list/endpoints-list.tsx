@@ -3,7 +3,7 @@ import styled, { useTheme } from 'styled-components';
 import { UrlMethod } from '@kode-frontend/pathfinder-web-core';
 
 import { RadioGroup } from '../../molecules';
-import { TOption } from '../../molecules/radio-group/types';
+import { TRadioOptions } from '../../atoms/radio-input/types';
 import { TUrlItem } from './types';
 
 const Wrapper = styled.div`
@@ -12,10 +12,22 @@ const Wrapper = styled.div`
   align-items: stretch;
   justify-content: start;
   width: 100%;
-  max-height: 80vh;
+  max-height: 75vh;
   padding: 3px 6px;
   box-sizing: border-box;
   overflow: auto;
+  /* scrollbar-width: thin;
+  scrollbar-color: ${({ theme }) => theme.colors.decorative.medium.normal}
+    transparent;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.colors.decorative.medium.normal};
+    border-radius: 3px;
+  } */
 `;
 
 const Table = styled.table`
@@ -53,7 +65,7 @@ const EndpointName = styled.span`
 `;
 
 type Props = {
-  environments: TOption[];
+  environments: TRadioOptions[];
   items: TUrlItem[];
   initialValues: Record<string, string>;
   onChange: (urlId: string, envId?: string) => void;

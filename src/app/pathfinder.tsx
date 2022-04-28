@@ -48,6 +48,7 @@ const Content = styled.div`
   transform: translate(-50%, -50%);
   z-index: 25;
   padding: 16px;
+  color: ${({ theme }) => theme.colors.main.dark.normal};
 
   * {
     box-sizing: border-box;
