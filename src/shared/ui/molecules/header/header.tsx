@@ -1,23 +1,50 @@
-import React from 'react'
-import { Button } from '../../atoms/button'
-import { memo, MouseEventHandler, ReactNode } from 'react'
-import { CloseIcon } from '../../atoms/close-icon'
-import styles from './header.module.css'
+import React, { memo, MouseEventHandler, ReactNode } from 'react';
+import styled, { useTheme } from 'styled-components';
+
+import { CloseIcon } from '../../icons';
+import { Button } from '../../atoms';
+
+const Wrapper = styled.div`
+  display: flex;
+  padding: 18px 8px;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Title = styled.h1`
+  flex: 1 1 auto;
+  margin: 0;
+`;
+
+const ActionWrapper = styled.div`
+  flex: 0 0 auto;
+  align-self: flex-start;
+  margin-top: -3px;
+  margin-right: -6px;
+`;
 
 type Props = {
-  children: ReactNode
-  onClose: MouseEventHandler<HTMLButtonElement>
-}
+  children: ReactNode;
+  onClose: MouseEventHandler<HTMLButtonElement>;
+};
 
-export const Header = memo(({ children, onClose }: Props) => (
-  <div className={styles.wrapper}>
-    <h1 className={styles.title}>{children}</h1>
-    <div className={styles.action}>
-      <Button transparent onClick={onClose}>
-        <CloseIcon width={16} height={16} />
-      </Button>
-    </div>
-  </div>
-))
+export const Header = memo(({ children, onClose }: Props) => {
+  const theme = useTheme();
 
-export default Header
+  return (
+    <Wrapper>
+      <Title>{children}</Title>
+      <ActionWrapper>
+        <Button onClick={onClose} transparent title={'Close'}>
+          <CloseIcon
+            width={16}
+            height={16}
+            fill={theme.colors.main.dark.normal}
+          />
+        </Button>
+      </ActionWrapper>
+    </Wrapper>
+  );
+});
+
+export default Header;
