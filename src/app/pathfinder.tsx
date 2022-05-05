@@ -5,10 +5,6 @@ import React, {
   useMemo,
   useState,
 } from 'react';
-import styles from './pathfinder.module.css';
-import { PanelButton } from '../shared/ui/atoms/panel-button/index';
-import { Panel } from '../shared/ui/organisms/panel/index';
-
 import {
   createPathFinder,
   DataResolver,
@@ -17,11 +13,59 @@ import {
   Spec,
   UrlSpec,
 } from '@kode-frontend/pathfinder-web-core';
+import styled, { ThemeProvider } from 'styled-components';
 
-import { addConsoleActivation } from '../features/hidden-activation';
-import { useRequestInterception } from '../processes/request-interception';
+import { theme } from '../ui/theme';
+import { PanelButton } from '../shared/ui/atoms';
+import { Panel } from '../shared/ui/organisms';
+import { TPanelEnv, TPanelUrl } from '../shared/ui/organisms/panel/types';
 
-import { PanelEnv, PanelUrl } from '../shared/ui/organisms/panel/panel';
+import { addConsoleActivation } from '../features';
+import { useRequestInterception } from '../processes';
+
+const ActionWrapper = styled.div`
+  position: fixed;
+  right: 3px;
+  bottom: 3px;
+  z-index: 10;
+  width: 64px;
+  height: 64px;
+`;
+
+const Container = styled.div`
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+`;
+
+const Content = styled.div`
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 25;
+  padding: 16px;
+  color: ${({ theme }) => theme.colors.main.dark.normal};
+
+  * {
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background-color: ${({ theme }) => theme.colors.decorative.dark.translucent};
+  backdrop-filter: blur(3px);
+`;
 
 type PathfinderProviderProps = {
   children: JSX.Element;
@@ -30,13 +74,16 @@ type PathfinderProviderProps = {
   active?: boolean;
 };
 
-const toPanelUrl = (url: UrlSpec): PanelUrl => ({
+const toPanelUrl = (url: UrlSpec): TPanelUrl => ({
   id: url.id,
   method: url.method,
   template: url.template,
   name: url.name,
 });
-const toPanelEnv = (env: EnvSpec): PanelEnv => ({ id: env.id, name: env.name });
+const toPanelEnv = (env: EnvSpec): TPanelEnv => ({
+  id: env.id,
+  name: env.name,
+});
 
 export const Pathfinder = ({
   children,
@@ -93,15 +140,15 @@ export const Pathfinder = ({
   });
 
   return (
-    <Fragment>
-      <div className={styles.app}>{children}</div>
-      <div className={styles.action}>
+    <ThemeProvider theme={theme}>
+      <div>{children}</div>
+      <ActionWrapper>
         <PanelButton onClick={handleToggle} />
-      </div>
+      </ActionWrapper>
       {isOpen && (
-        <div className={styles.container}>
-          <div className={styles.overlay} />
-          <div className={styles.content}>
+        <Container>
+          <Overlay />
+          <Content>
             <Panel
               onLoadSpec={handleLoadSpec}
               config={config}
@@ -111,9 +158,9 @@ export const Pathfinder = ({
               onChangeUrlEnv={handleChangeUrlEnv}
               urlEnvInitialValues={initialUrlValues}
             />
-          </div>
-        </div>
+          </Content>
+        </Container>
       )}
-    </Fragment>
+    </ThemeProvider>
   );
 };

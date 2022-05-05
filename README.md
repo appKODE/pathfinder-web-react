@@ -179,7 +179,7 @@ Now, anytime you make changes to your library in `/src` or to the example app's 
 
 ## TODO
 
-- [ ] replace css modules with styled components
+- [x] replace css modules with styled components
 - [ ] add storybook
 - [ ] refactor components
 - [ ] add usage examples
