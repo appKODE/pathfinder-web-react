@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { useTheme } from 'styled-components';
 import { UrlMethod } from '@kode-frontend/pathfinder-web-core';
 
@@ -57,6 +57,10 @@ export const EndpointsList = ({
   const theme = useTheme();
   const [values, setValues] = useState(initialValues);
 
+  useEffect(() => {
+    setValues(initialValues);
+  }, [initialValues])
+
   const methodColor: Record<UrlMethod, string> = {
     GET: theme.colors.digital.green.normal,
     POST: theme.colors.digital.blue.normal,
@@ -72,36 +76,38 @@ export const EndpointsList = ({
   return (
     <ScrollWrapper>
       <Table>
-        {items.map((item) => (
-          <tr key={item.id}>
-            <td>
-              <Method $background={methodColor[item.method]}>
-                {item.method}
-              </Method>
-            </td>
-            <td>
-              {item.template}
-              <EndpointName>{item.name}</EndpointName>
-            </td>
-            <td>
-              <RadioGroup
-                id={item.id}
-                value={values[item.id]}
-                onChange={(id, value) => {
-                  onChange(id, value || undefined);
-                  setValues((prev) => ({ ...prev, [id]: value }));
-                }}
-                items={[
-                  ...environments,
-                  {
-                    label: 'Global',
-                    value: '',
-                  },
-                ]}
-              />
-            </td>
-          </tr>
-        ))}
+        <tbody>
+          {items.map((item) => (
+            <tr key={item.id}>
+              <td>
+                <Method $background={methodColor[item.method]}>
+                  {item.method}
+                </Method>
+              </td>
+              <td>
+                {item.template}
+                <EndpointName>{item.name}</EndpointName>
+              </td>
+              <td>
+                <RadioGroup
+                  id={item.id}
+                  value={values[item.id]}
+                  onChange={(id, value) => {
+                    onChange(id, value || undefined);
+                    setValues((prev) => ({ ...prev, [id]: value }));
+                  }}
+                  items={[
+                    ...environments,
+                    {
+                      label: 'Global',
+                      value: '',
+                    },
+                  ]}
+                />
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </Table>
     </ScrollWrapper>
   );
