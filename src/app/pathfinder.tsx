@@ -94,8 +94,9 @@ export const Pathfinder = ({
   const module = useMemo(() => {
     return createPathFinder(resolver, storage);
   }, [resolver, storage]);
-  const [spec, setSpec] = useState<Spec | undefined>(module.getSpec());
 
+  const [spec, setSpec] = useState<Spec | undefined>(module.getSpec());
+  const [isOpen, setOpen] = useState(false);
   const [isActive, setActive] = useState(active);
 
   useEffect(() => {
@@ -103,8 +104,6 @@ export const Pathfinder = ({
   }, [setActive]);
 
   useRequestInterception(module, isActive || false);
-
-  const [isOpen, setOpen] = useState(false);
 
   const handleToggle = useCallback(() => {
     setOpen((prevState) => !prevState);
@@ -122,6 +121,12 @@ export const Pathfinder = ({
     module.setSpec(data);
     setSpec(module.getSpec());
   };
+
+  const handleOnResetOptions = () => {
+    module.reset();
+    setSpec(module.getSpec());
+  };
+
   const config = {
     urlList: spec?.urls.map(toPanelUrl) || [],
     envList: spec?.envs.map(toPanelEnv) || [],
@@ -150,13 +155,14 @@ export const Pathfinder = ({
           <Overlay />
           <Content>
             <Panel
-              onLoadSpec={handleLoadSpec}
               config={config}
               defaultEnvId={module.getGlobalEnv()}
+              urlEnvInitialValues={initialUrlValues}
+              onLoadSpec={handleLoadSpec}
               onClose={handleToggle}
               onChangeDefaultEnv={handleChangeDefaultEnv}
               onChangeUrlEnv={handleChangeUrlEnv}
-              urlEnvInitialValues={initialUrlValues}
+              onResetOptions={handleOnResetOptions}
             />
           </Content>
         </Container>

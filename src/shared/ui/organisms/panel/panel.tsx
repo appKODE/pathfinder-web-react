@@ -1,7 +1,7 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useCallback } from 'react';
 import styled from 'styled-components';
 
-import { ScrollWrapper } from '../../atoms';
+import { ScrollWrapper, Button } from '../../atoms';
 import { Header, UploadSpec, RadioGroup } from '../../molecules';
 import { EndpointsList } from '..';
 import { TRadioOptions } from '../../atoms/radio-input/types';
@@ -40,16 +40,18 @@ type Props = {
   onChangeDefaultEnv: (envId: string | null) => void;
   onChangeUrlEnv: (urlId: string, envId?: string) => void;
   onLoadSpec: (data: unknown) => void;
+  onResetOptions: () => void;
 };
 
 export const Panel = ({
   config,
   defaultEnvId,
+  urlEnvInitialValues,
   onClose,
   onChangeDefaultEnv,
   onChangeUrlEnv,
   onLoadSpec,
-  urlEnvInitialValues,
+  onResetOptions,
 }: Props) => {
   const [defaultEnv, setDefaultValue] = useState<string>(defaultEnvId || '');
 
@@ -62,6 +64,11 @@ export const Panel = ({
     [config]
   );
 
+  const resetOptions = useCallback(() => {
+    setDefaultValue('');
+    onResetOptions();
+  }, [onResetOptions]);
+
   return (
     <Wrapper>
       <Header onClose={onClose}>Pathfinder</Header>
@@ -69,29 +76,37 @@ export const Panel = ({
       {environments.length > 0 && (
         <ScrollWrapper>
           <DefaultControls>
-            <tr>
-              <td>
-                <Text>Use the requests environment for all requests:</Text>
-              </td>
-              <td>
-                <RadioGroup
-                  id={'default'}
-                  value={defaultEnv}
-                  color={'red'}
-                  onChange={(_, value) => {
-                    onChangeDefaultEnv(value || null);
-                    setDefaultValue(value);
-                  }}
-                  items={[
-                    ...environments,
-                    {
-                      label: 'Default',
-                      value: '',
-                    },
-                  ]}
-                />
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>
+                  <Text>Use the requests environment for all requests:</Text>
+                </td>
+                <td>
+                  <RadioGroup
+                    id={'default'}
+                    value={defaultEnv}
+                    color={'red'}
+                    onChange={(_, value) => {
+                      onChangeDefaultEnv(value || null);
+                      setDefaultValue(value);
+                    }}
+                    items={[
+                      ...environments,
+                      {
+                        label: 'Default',
+                        value: '',
+                      },
+                    ]}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td align='right'>
+                  <Button active title='reset to default' onClick={resetOptions}>reset to default</Button>
+                </td>
+              </tr>
+            </tbody>
           </DefaultControls>
         </ScrollWrapper>
       )}
