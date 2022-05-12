@@ -1,8 +1,8 @@
 import { ComponentProps } from 'react';
 import { Args, Meta, Story } from '@storybook/react';
-import Component from './panel';
+import { Panel } from './panel';
 
-type Props = ComponentProps<typeof Component>;
+type Props = ComponentProps<typeof Panel>;
 type StoryProps<T> = T extends {} ? T : Args;
 
 const config = {
@@ -37,6 +37,6 @@ const storage = {
 
 export default {
   title: 'UI/organisms/Panel',
-  component: Component,
+  component: Panel,
   args: { config, data: storage },
 } as Meta;
