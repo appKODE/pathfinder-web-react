@@ -12,9 +12,6 @@
   <a href="https://www.npmjs.com/package/@kode-frontend/pathfinder-web-react">
     <img alt="npm downloads" src="https://img.shields.io/npm/dt/@kode-frontend/pathfinder-web-react.svg">
   </a>
-  <a href="https://packagephobia.com/result?p=@kode-frontend/pathfinder-web-react">
-    <img alt="install size" src="https://packagephobia.com/badge?p=@kode-frontend/pathfinder-web-react">
-  </a>
   <a href="https://github.com/appKODE/pathfinder-web-react/blob/main/LICENSE">
     <img alt="npm license" src="https://img.shields.io/npm/l/@kode-frontend/pathfinder-web-react.svg">
   </a>
@@ -136,6 +133,14 @@ const App = () => {
 2. Upload your [OpenAPI 3.0 Specification](https://swagger.io/specification/) file from [Stoplight](https://stoplight.io/).
 3. Configure the base paths for all requests or only for the required ones.
 
+## Development 
+### Plop.js
+There is a plop.js tool to create ui-component using a template. You need to set up [extension](https://marketplace.visualstudio.com/items?itemName=SamKirkland.plop-templates) to create components quickly. After the extension installation you should follow these 2 steps: 
+1. Create a new folder for your ui-component;
+2. Click on the `New File from Template` in the context menu.
+
+Use it for quick component creation without mistakes.
+
 ## Example
 
 Clone repository and install dependencies:
@@ -187,3 +192,9 @@ Now, anytime you make changes to your library in `/src` or to the example app's 
 ## License
 
 [MIT ©](https://github.com/appKODE/pathfinder-web-react/LICENCE)
+
+There is plop.js tool to create ui-component using a template. You need to set  up to create components quickly. After an extension installing you should follow next 2 steps: 
+1. Create new folder for ui-component;
+2. Click on `New File from Template` in context menu.
+
+Use it for quick component creating without mistakes.
