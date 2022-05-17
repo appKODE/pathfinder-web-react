@@ -1,12 +1,14 @@
 import { ComponentProps } from 'react';
-import { Args, Meta, Story } from '@storybook/react';
-import Component from './header';
+import { Meta } from '@storybook/react';
+import { Header as PanelHeader } from './header';
 
-type Props = ComponentProps<typeof Component>;
-type StoryProps<T> = T extends {} ? T : Args;
+type Props = Partial<ComponentProps<typeof PanelHeader>>;
+const args: Props = {};
 
-export default { title: 'UI/molecules/Header', component: Component } as Meta;
+export default {
+  title: 'UI/molecules/Header',
+  component: PanelHeader,
+  args: args,
+} as Meta;
 
-export const Header: Story<StoryProps<Props>> = props => (
-  <Component {...props} children="Header" />
-);
+export const Basic = PanelHeader;
