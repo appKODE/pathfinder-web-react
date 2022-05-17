@@ -1,38 +1,36 @@
 import { Meta } from '@storybook/react';
+import { ComponentProps } from 'react';
 import { Panel } from './panel';
 
-const config = {
-  envList: [
-    { id: 'local', name: 'Local' },
-    { id: 'prod', name: 'Prod' },
-    { id: 'dev', name: 'Dev' },
-  ],
-  urlList: Array(1000)
-    .fill(undefined)
-    .map((_, index) => ({
-      id: index.toString(),
-      method: 'GET',
-      template: '/user/{1}/list',
-    })),
-};
-
-const storage = {
+type Props = Partial<ComponentProps<typeof Panel>>;
+const args: Props = {
+  config: {
+    envList: [
+      { id: 'local', name: 'Local' },
+      { id: 'prod', name: 'Prod' },
+      { id: 'dev', name: 'Dev' },
+    ],
+    urlList: Array(30)
+      .fill(undefined)
+      .map((_, index) => ({
+        id: index.toString(),
+        method: `${index % 2 === 0 ? 'GET' : 'POST'}`,
+        template: `/user/${index}/list`,
+        name: 'Endpoint Name',
+      })),
+  },
   defaultEnvId: 'local',
-  url: {
-    '3': {
-      envId: 'dev',
-    },
-    '7': {
-      envId: 'local',
-    },
-    '8': {
-      envId: 'dev',
-    },
+  urlEnvInitialValues: {
+    3: 'dev',
+    7: 'local',
+    8: 'dev',
   },
 };
 
 export default {
   title: 'UI/organisms/Panel',
   component: Panel,
-  args: { config, data: storage },
+  args,
 } as Meta;
+
+export const Basic = Panel;

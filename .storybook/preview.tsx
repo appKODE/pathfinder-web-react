@@ -1,4 +1,5 @@
 // https://storybook.js.org/docs/react/writing-stories/parameters#global-parameters
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Story } from '@storybook/react';
 import { theme } from '../src/ui/theme';
