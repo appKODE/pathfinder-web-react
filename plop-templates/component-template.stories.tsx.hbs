@@ -1,9 +1,10 @@
 import { ComponentProps } from 'react';
 import { {{pascalCase name}} } from '.';
 
-type Props = Partial<ComponentProps<typeof {{pascalCase name}}>>;
+type Props = ComponentProps<typeof {{pascalCase name}}>;
+type PartialProps = Partial<Props>;
 
-const args: Props = {};
+const args: PartialProps = {};
 
 export default {
   title: '{{pascalCase name}}',

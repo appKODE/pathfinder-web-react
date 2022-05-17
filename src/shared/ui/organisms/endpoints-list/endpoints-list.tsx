@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
+import { UrlMethod } from '@kode-frontend/pathfinder-web-core';
 
 import { ScrollWrapper } from '../../atoms';
 import { RadioGroup } from '../../molecules';
 import { TRadioOptions } from '../../atoms/radio-input/types';
 import { TUrlItem } from './types';
-import { Method } from '../../atoms';
 
 const Table = styled.table`
   width: 100%;
@@ -24,6 +24,15 @@ const Table = styled.table`
     border: 1px solid
       ${({ theme }) => theme.colors.decorative.medium.translucent};
   }
+`;
+
+const Method = styled.span<{ $background: string }>`
+  font-size: 12px;
+  display: inline-block;
+  padding: 4px 8px;
+  color: ${({ theme }) => theme.colors.main.light.normal};
+  border-radius: 4px;
+  background-color: ${({ $background }) => $background};
 `;
 
 const EndpointName = styled.span`
@@ -45,11 +54,24 @@ export const EndpointsList = ({
   initialValues,
   onChange,
 }: Props) => {
+  const theme = useTheme();
   const [values, setValues] = useState(initialValues);
 
   useEffect(() => {
     setValues(initialValues);
-  }, [initialValues]);
+  }, [initialValues])
+
+  const methodColor: Record<UrlMethod, string> = {
+    GET: theme.colors.digital.green.normal,
+    POST: theme.colors.digital.blue.normal,
+    DELETE: theme.colors.digital.red.normal,
+    PUT: theme.colors.digital.orange.normal,
+    PATCH: theme.colors.digital.orange.normal,
+    HEAD: theme.colors.digital.violet.normal,
+    TRACE: theme.colors.digital.violet.normal,
+    CONNECT: theme.colors.digital.violet.normal,
+    OPTIONS: theme.colors.digital.violet.normal,
+  };
 
   return (
     <ScrollWrapper>
@@ -58,7 +80,9 @@ export const EndpointsList = ({
           {items.map((item) => (
             <tr key={item.id}>
               <td>
-                <Method method={item.method} />
+                <Method $background={methodColor[item.method]}>
+                  {item.method}
+                </Method>
               </td>
               <td>
                 {item.template}
