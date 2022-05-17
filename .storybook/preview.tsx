@@ -2,7 +2,7 @@
 import { ThemeProvider } from 'styled-components';
 import { Story } from '@storybook/react';
 import { theme } from '../src/ui/theme';
-import { GlobalStyles } from './storybook-global-styles';
+import { StorybookGlobalStyles } from './storybook-global-styles';
 
 export const parameters = {
   actions: { argTypesRegex: '^on.*' },
@@ -20,7 +20,7 @@ export const withThemeProvider = (Story: Story) => {
   return (
     <ThemeProvider theme={theme}>
       <Story />
-      <GlobalStyles />
+      <StorybookGlobalStyles />
     </ThemeProvider>
   );
 };
