@@ -1,9 +1,5 @@
-import { ComponentProps } from 'react';
-import { Args, Meta, Story } from '@storybook/react';
+import { Meta } from '@storybook/react';
 import { Panel } from './panel';
-
-type Props = ComponentProps<typeof Panel>;
-type StoryProps<T> = T extends {} ? T : Args;
 
 const config = {
   envList: [
