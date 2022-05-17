@@ -1,4 +1,10 @@
-import React, { useMemo, useState, useCallback } from 'react';
+import React, {
+  useMemo,
+  useState,
+  useCallback,
+  useEffect,
+  FocusEvent,
+} from 'react';
 import styled from 'styled-components';
 
 import { ScrollWrapper, Button } from '../../atoms';
@@ -6,6 +12,9 @@ import { Header, UploadSpec, RadioGroup } from '../../molecules';
 import { EndpointsList } from '..';
 import { TRadioOptions } from '../../atoms/radio-input/types';
 import { TConfig } from './types';
+import { SearchInput } from '../../flows';
+import { TUrlItem } from '../endpoints-list/types';
+import { UrlMethod } from '@kode-frontend/pathfinder-web-core';
 
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.main.light.normal};
@@ -54,6 +63,19 @@ export const Panel = ({
   onResetOptions,
 }: Props) => {
   const [defaultEnv, setDefaultValue] = useState<string>(defaultEnvId || '');
+  const [filteredPaths, setFilteredPaths] = useState<TUrlItem[]>(
+    config.urlList
+  );
+  const [value, setValue] = useState<string>('');
+
+  const methods = Array.from(
+    new Set(config.urlList.map((item) => item.method))
+  );
+  const [filteredMethods, setFilteredMethods] = useState<UrlMethod[]>(methods);
+
+  function onChange(e: FocusEvent<HTMLInputElement>) {
+    setValue(e.target.value);
+  }
 
   const environments = useMemo<TRadioOptions[]>(
     () =>
@@ -69,10 +91,38 @@ export const Panel = ({
     onResetOptions();
   }, [onResetOptions]);
 
+  function onClearHandler() {
+    setFilteredPaths(config.urlList);
+    setValue('');
+  }
+
+  function onSelectMethod(selectedMethod: UrlMethod | string) {
+    if (selectedMethod === 'All methods') {
+      return setFilteredMethods(methods);
+    }
+    setFilteredMethods(methods.filter((method) => method === selectedMethod));
+  }
+
+  useEffect(() => {
+    setFilteredPaths(
+      config.urlList.filter(
+        (item) =>
+          filteredMethods.includes(item.method) && item.template.includes(value)
+      )
+    );
+  }, [value, filteredMethods]);
+
   return (
     <Wrapper>
       <Header onClose={onClose}>Pathfinder</Header>
       <UploadSpec onLoad={onLoadSpec} />
+      <SearchInput
+        value={value}
+        methods={methods}
+        onClearHandler={onClearHandler}
+        onSelectMethod={onSelectMethod}
+        onChange={onChange}
+      />
       {environments.length > 0 && (
         <ScrollWrapper>
           <DefaultControls>
@@ -102,8 +152,14 @@ export const Panel = ({
               </tr>
               <tr>
                 <td></td>
-                <td align='right'>
-                  <Button active title='reset to default' onClick={resetOptions}>reset to default</Button>
+                <td align="right">
+                  <Button
+                    active
+                    title="reset to default"
+                    onClick={resetOptions}
+                  >
+                    reset to default
+                  </Button>
                 </td>
               </tr>
             </tbody>
@@ -114,7 +170,7 @@ export const Panel = ({
         <EndpointsList
           onChange={onChangeUrlEnv}
           environments={environments}
-          items={config.urlList}
+          items={filteredPaths}
           initialValues={urlEnvInitialValues}
         />
       )}
