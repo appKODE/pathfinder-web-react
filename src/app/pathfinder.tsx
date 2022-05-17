@@ -1,10 +1,4 @@
-import React, {
-  Fragment,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import React, { Fragment, useCallback, useEffect, useMemo, useState } from 'react';
 import {
   createPathFinder,
   DataResolver,

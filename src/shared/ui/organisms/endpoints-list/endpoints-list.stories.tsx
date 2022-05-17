@@ -1,8 +1,8 @@
 import { ComponentProps } from 'react';
 import { Args, Meta, Story } from '@storybook/react';
-import Component from './endpoints-list';
+import { EndpointsList } from './endpoints-list';
 
-type Props = ComponentProps<typeof Component>;
+type Props = ComponentProps<typeof EndpointsList>;
 type PartialProps = Partial<Props>;
 type StoryProps<T> = T extends {} ? T : Args;
 
@@ -34,13 +34,13 @@ const args: PartialProps = {
 
 export default {
   title: 'Pathfinder/organisms/EndpointList',
-  component: Component,
+  component: EndpointsList,
   args,
   argTypes: {
     onChange: { action: 'onChange' },
   },
 } as Meta;
 
-export const Panel: Story<StoryProps<Props>> = props => (
-  <Component {...props} />
+export const Panel: Story<StoryProps<Props>> = (props) => (
+  <EndpointsList {...props} />
 );

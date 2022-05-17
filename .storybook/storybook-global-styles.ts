@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyles = createGlobalStyle`
+export const StorybookGlobalStyles = createGlobalStyle`
   *{
     box-sizing:border-box;
   }
