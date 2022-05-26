@@ -1,15 +1,15 @@
 import { ComponentProps } from 'react';
-import { Args, Meta, Story } from '@storybook/react';
-import Component from './panel-button';
 
-type Props = ComponentProps<typeof Component>;
-type StoryProps<T> = T extends {} ? T : Args;
+import { PanelButton } from '.';
+
+type Props = Partial<ComponentProps<typeof PanelButton>>;
+
+const args: Props = {};
 
 export default {
-  title: 'UI/atoms/Panel Button',
-  component: Component,
-} as Meta<StoryProps<Props>>;
+  title: 'UI/atoms/PanelButton',
+  component: PanelButton,
+  args,
+};
 
-export const PanelButton: Story<StoryProps<Props>> = props => (
-  <Component {...props} />
-);
+export const Basic = PanelButton;

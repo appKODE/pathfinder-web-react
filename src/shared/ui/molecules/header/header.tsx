@@ -46,5 +46,3 @@ export const Header = memo(({ children, onClose }: Props) => {
     </Wrapper>
   );
 });
-
-export default Header;

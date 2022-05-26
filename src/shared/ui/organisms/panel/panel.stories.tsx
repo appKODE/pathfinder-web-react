@@ -1,8 +1,9 @@
-import { Meta } from '@storybook/react';
 import { ComponentProps } from 'react';
-import { Panel } from './panel';
+
+import { Panel } from '.';
 
 type Props = Partial<ComponentProps<typeof Panel>>;
+
 const args: Props = {
   config: {
     envList: [
@@ -31,6 +32,6 @@ export default {
   title: 'UI/organisms/Panel',
   component: Panel,
   args,
-} as Meta;
+};
 
 export const Basic = Panel;

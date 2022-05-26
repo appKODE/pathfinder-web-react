@@ -38,5 +38,3 @@ export const PanelButton = ({ onClick }: Props) => {
     </Button>
   );
 };
-
-export default PanelButton;

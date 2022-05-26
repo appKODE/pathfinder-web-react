@@ -1,9 +1,20 @@
-import React from 'react';
-import { Meta, Story } from '@storybook/react';
-import Component from './button';
+import { ComponentProps } from 'react';
 
-export default { title: 'UI/atoms/Button', component: Component } as Meta;
+import { Button } from '.';
 
-export const Button: Story<React.ComponentProps<typeof Component>> = (
-  props
-) => <Component {...props}>Text</Component>;
+type Props = Partial<ComponentProps<typeof Button>>;
+
+const args: Props = {
+  children: <>Button</>,
+  title: 'Button',
+  transparent: false,
+  active: false,
+};
+
+export default {
+  title: 'UI/atoms/Button',
+  component: Button,
+  args,
+};
+
+export const Basic = Button;
