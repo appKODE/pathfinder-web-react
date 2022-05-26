@@ -1,4 +1,5 @@
 import React, { useMemo, useState, useCallback, useEffect } from 'react';
+import { UrlMethod } from '@kode-frontend/pathfinder-web-core';
 import styled from 'styled-components';
 
 import { ScrollWrapper, Button } from '../../atoms';
@@ -8,7 +9,6 @@ import { TRadioOptions } from '../../atoms/radio-input/types';
 import { TConfig } from './types';
 import { SearchInput } from '../../flows';
 import { TUrlItem } from '../endpoints-list/types';
-import { UrlMethod } from '@kode-frontend/pathfinder-web-core';
 
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.main.light.normal};
@@ -69,7 +69,7 @@ export const Panel = ({
 
   const onHandleChange = (value: string) => {
     setSearchValue(value);
-  }
+  };
 
   const environments = useMemo<TRadioOptions[]>(
     () =>
@@ -88,14 +88,14 @@ export const Panel = ({
   const onClearHandler = () => {
     setFilteredPaths(config.urlList);
     setSearchValue('');
-  }
+  };
 
   const onSelectMethod = (selectedMethod: UrlMethod | null) => {
     if (!selectedMethod) {
       return setFilteredMethods(methods);
     }
     setFilteredMethods(methods.filter((method) => method === selectedMethod));
-  }
+  };
 
   useEffect(() => {
     setFilteredPaths(

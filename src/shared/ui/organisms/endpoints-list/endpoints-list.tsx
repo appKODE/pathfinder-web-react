@@ -52,7 +52,7 @@ export const EndpointsList = ({
   }, [initialValues]);
 
   return (
-    <ScrollWrapper>
+    <ScrollWrapper height={'60vh'} maxHeight={'60vh'}>
       <Table>
         <tbody>
           {items.map((item) => (

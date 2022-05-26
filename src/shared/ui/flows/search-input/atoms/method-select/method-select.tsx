@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import { UrlMethod } from '@kode-frontend/pathfinder-web-core';
 
-import { ArrowDownIcon } from '../../../../icons';
+import { ChevronIcon } from '../../../../icons';
 import { Method } from '../../../../atoms';
 
 const Wrapper = styled.div`
@@ -12,18 +12,19 @@ const Wrapper = styled.div`
 
 const MethodButton = styled.button`
   background-color: transparent;
-  outline: none;
+  color: ${({ theme }) => theme.colors.main.dark.normal};
   padding: 0;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   border: none;
+  outline: none;
   cursor: pointer;
 `;
 
-const StyledText = styled.p`
+const Text = styled.span`
   font-family: sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -32,18 +33,14 @@ const StyledText = styled.p`
   white-space: nowrap;
 `;
 
-const IconWrap = styled.div<{ isDropped: boolean }>`
-  margin-left: 8px;
-`;
-
 const DropDown = styled.div`
   position: absolute;
-  background-color: ${({ theme }) => theme.colors.decorative.light.normal};
   top: 38px;
-  border-radius: 0 0 3px 3px;
   left: -10px;
-  min-height: 50px;
   width: 170px;
+  min-height: 50px;
+  background-color: ${({ theme }) => theme.colors.decorative.light.normal};
+  border-radius: 0 0 3px 3px;
 `;
 
 const DropDownItem = styled.div`
@@ -69,6 +66,8 @@ export const MethodSelect = ({ methods, onSelectMethod }: Props) => {
   const [selectedMethod, setSelectedMethod] = useState<UrlMethod | null>(null);
   const [isDropped, setIsDropped] = useState<boolean>(false);
 
+  const theme = useTheme();
+
   const onHandleSelect = (method: UrlMethod | null) => {
     onSelectMethod(method);
     setSelectedMethod(method);
@@ -83,11 +82,13 @@ export const MethodSelect = ({ methods, onSelectMethod }: Props) => {
           setIsDropped((prevState) => !prevState);
         }}
       >
-        <StyledText>{selectedMethod ?? 'All methods'}</StyledText>
-        <IconWrap isDropped={isDropped}>
-          <ArrowDownIcon />
-        </IconWrap>
+        <Text>{selectedMethod ?? 'All methods'}</Text>
+        <ChevronIcon
+          color={theme.colors.main.dark.normal}
+          angle={isDropped ? 180 : 0}
+        />
       </MethodButton>
+
       {isDropped && (
         <DropDown>
           <DropDownItem
@@ -99,9 +100,10 @@ export const MethodSelect = ({ methods, onSelectMethod }: Props) => {
           >
             All methods
           </DropDownItem>
+
           {methods &&
-            [...methods].map((method) => (
-              <DropDownItem onClick={() => onHandleSelect(method)}>
+            [...methods].map((method, index) => (
+              <DropDownItem onClick={() => onHandleSelect(method)} key={index}>
                 <Method method={method} />
               </DropDownItem>
             ))}
