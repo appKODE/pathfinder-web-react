@@ -1,14 +1,32 @@
 import { ComponentProps } from 'react';
+
 import { Method } from '.';
 
 type Props = Partial<ComponentProps<typeof Method>>;
 
-const args: Props = {};
+const args: Props = {
+  method: 'DELETE',
+};
 
 export default {
-  title: 'Method',
+  title: 'UI/atoms/Method',
   component: Method,
-  argTypes: {},
+  argTypes: {
+    method: {
+      options: [
+        'PUT',
+        'GET',
+        'HEAD',
+        'POST',
+        'PATCH',
+        'TRACE',
+        'DELETE',
+        'CONNECT',
+        'OPTIONS',
+      ],
+      control: { type: 'radio' },
+    },
+  },
   args,
 };
 

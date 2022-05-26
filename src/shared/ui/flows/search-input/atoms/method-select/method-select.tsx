@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { UrlMethod } from '@kode-frontend/pathfinder-web-core';
+
 import { ArrowDownIcon } from '../../../../icons';
 import { Method } from '../../../../atoms';
 
@@ -65,8 +66,7 @@ type Props = {
 };
 
 export const MethodSelect = ({ methods, onSelectMethod }: Props) => {
-  const [selectedMethod, setSelectedMethod] =
-    useState<UrlMethod | null>(null);
+  const [selectedMethod, setSelectedMethod] = useState<UrlMethod | null>(null);
   const [isDropped, setIsDropped] = useState<boolean>(false);
 
   const onHandleSelect = (method: UrlMethod | null) => {

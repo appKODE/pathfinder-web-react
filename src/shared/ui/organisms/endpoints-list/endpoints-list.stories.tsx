@@ -1,11 +1,10 @@
 import { ComponentProps } from 'react';
-import { Meta } from '@storybook/react';
-import { EndpointsList } from './endpoints-list';
 
-type Props = ComponentProps<typeof EndpointsList>;
-type PartialProps = Partial<Props>;
+import { EndpointsList } from '.';
 
-const args: PartialProps = {
+type Props = Partial<ComponentProps<typeof EndpointsList>>;
+
+const args: Props = {
   environments: [
     {
       label: 'label',
@@ -32,12 +31,12 @@ const args: PartialProps = {
 };
 
 export default {
-  title: 'Pathfinder/organisms/EndpointList',
+  title: 'UI/organisms/EndpointList',
   component: EndpointsList,
   args,
   argTypes: {
     onChange: { action: 'onChange' },
   },
-} as Meta;
+};
 
-export const Basic = EndpointsList
+export const Basic = EndpointsList;
