@@ -10,7 +10,7 @@ exports[`Storyshots UI/atoms/Method Basic 1`] = `
 
 exports[`Storyshots UI/atoms/PanelButton Basic 1`] = `
 <button
-  className="sc-gsnTZi dSblAb"
+  className="sc-dkzDqf epbTkk"
 >
   <svg
     height={16}
@@ -33,17 +33,17 @@ exports[`Storyshots UI/atoms/PanelButton Basic 1`] = `
 
 exports[`Storyshots UI/atoms/RadioInput Basic 1`] = `
 <label
-  className="sc-hKMtZM cVRgZO"
+  className="sc-eCYdqJ dkXXkk"
   htmlFor="undefined-Radio Input"
 >
   <input
     checked={true}
-    className="sc-eCYdqJ hersNK"
+    className="sc-jSMfEi krwMNI"
     id="undefined-Radio Input"
     type="radio"
   />
   <span
-    className="sc-dkzDqf behqXB"
+    className="sc-hKMtZM jEgUfa"
   />
   Radio Input
 </label>
@@ -62,7 +62,7 @@ exports[`Storyshots UI/molecules/Header Basic 1`] = `
     className="sc-fEOsli jUwieR"
   >
     <button
-      className="sc-jSMfEi iOmVlp"
+      className="sc-gKXOVf akMNI"
       title="Close"
     >
       <svg
@@ -86,12 +86,12 @@ exports[`Storyshots UI/molecules/RadioGroup Basic 1`] = `
   className="sc-bjUoiL eZJmLb"
 >
   <label
-    className="sc-hKMtZM cVRgZO"
+    className="sc-eCYdqJ dkXXkk"
     htmlFor="id-Radio Input 1"
   >
     <input
       checked={false}
-      className="sc-eCYdqJ hersNK"
+      className="sc-jSMfEi krwMNI"
       id="id-Radio Input 1"
       name="id"
       onChange={[Function]}
@@ -99,17 +99,17 @@ exports[`Storyshots UI/molecules/RadioGroup Basic 1`] = `
       value="1"
     />
     <span
-      className="sc-dkzDqf behqXB"
+      className="sc-hKMtZM jEgUfa"
     />
     Radio Input 1
   </label>
   <label
-    className="sc-hKMtZM cVRgZO"
+    className="sc-eCYdqJ dkXXkk"
     htmlFor="id-Radio Input 2"
   >
     <input
       checked={true}
-      className="sc-eCYdqJ hersNK"
+      className="sc-jSMfEi krwMNI"
       id="id-Radio Input 2"
       name="id"
       onChange={[Function]}
@@ -117,17 +117,17 @@ exports[`Storyshots UI/molecules/RadioGroup Basic 1`] = `
       value="2"
     />
     <span
-      className="sc-dkzDqf behqXB"
+      className="sc-hKMtZM jEgUfa"
     />
     Radio Input 2
   </label>
   <label
-    className="sc-hKMtZM cVRgZO"
+    className="sc-eCYdqJ dkXXkk"
     htmlFor="id-Radio Input 3"
   >
     <input
       checked={false}
-      className="sc-eCYdqJ hersNK"
+      className="sc-jSMfEi krwMNI"
       id="id-Radio Input 3"
       name="id"
       onChange={[Function]}
@@ -135,17 +135,17 @@ exports[`Storyshots UI/molecules/RadioGroup Basic 1`] = `
       value="3"
     />
     <span
-      className="sc-dkzDqf behqXB"
+      className="sc-hKMtZM jEgUfa"
     />
     Radio Input 3
   </label>
   <label
-    className="sc-hKMtZM cVRgZO"
+    className="sc-eCYdqJ dkXXkk"
     htmlFor="id-Radio Input 4"
   >
     <input
       checked={false}
-      className="sc-eCYdqJ hersNK"
+      className="sc-jSMfEi krwMNI"
       id="id-Radio Input 4"
       name="id"
       onChange={[Function]}
@@ -153,17 +153,17 @@ exports[`Storyshots UI/molecules/RadioGroup Basic 1`] = `
       value="4"
     />
     <span
-      className="sc-dkzDqf behqXB"
+      className="sc-hKMtZM jEgUfa"
     />
     Radio Input 4
   </label>
   <label
-    className="sc-hKMtZM cVRgZO"
+    className="sc-eCYdqJ dkXXkk"
     htmlFor="id-Radio Input 5"
   >
     <input
       checked={false}
-      className="sc-eCYdqJ hersNK"
+      className="sc-jSMfEi krwMNI"
       id="id-Radio Input 5"
       name="id"
       onChange={[Function]}
@@ -171,7 +171,7 @@ exports[`Storyshots UI/molecules/RadioGroup Basic 1`] = `
       value="5"
     />
     <span
-      className="sc-dkzDqf behqXB"
+      className="sc-hKMtZM jEgUfa"
     />
     Radio Input 5
   </label>
@@ -221,7 +221,7 @@ exports[`Storyshots UI/molecules/UploadSpec Basic 1`] = `
 
 exports[`Storyshots UI/organisms/EndpointList Basic 1`] = `
 <div
-  className="sc-gKXOVf dKcEah"
+  className="sc-iBkjds FlDag"
 >
   <table
     className="sc-dmRaPn dshnNP"
@@ -248,12 +248,12 @@ exports[`Storyshots UI/organisms/EndpointList Basic 1`] = `
             className="sc-bjUoiL eZJmLb"
           >
             <label
-              className="sc-hKMtZM cVRgZO"
+              className="sc-eCYdqJ dkXXkk"
               htmlFor="1-label"
             >
               <input
                 checked={false}
-                className="sc-eCYdqJ hersNK"
+                className="sc-jSMfEi krwMNI"
                 id="1-label"
                 name="1"
                 onChange={[Function]}
@@ -261,17 +261,17 @@ exports[`Storyshots UI/organisms/EndpointList Basic 1`] = `
                 value="1"
               />
               <span
-                className="sc-dkzDqf behqXB"
+                className="sc-hKMtZM jEgUfa"
               />
               label
             </label>
             <label
-              className="sc-hKMtZM cVRgZO"
+              className="sc-eCYdqJ dkXXkk"
               htmlFor="1-Global"
             >
               <input
                 checked={true}
-                className="sc-eCYdqJ hersNK"
+                className="sc-jSMfEi krwMNI"
                 id="1-Global"
                 name="1"
                 onChange={[Function]}
@@ -279,7 +279,7 @@ exports[`Storyshots UI/organisms/EndpointList Basic 1`] = `
                 value=""
               />
               <span
-                className="sc-dkzDqf behqXB"
+                className="sc-hKMtZM jEgUfa"
               />
               Global
             </label>
@@ -307,12 +307,12 @@ exports[`Storyshots UI/organisms/EndpointList Basic 1`] = `
             className="sc-bjUoiL eZJmLb"
           >
             <label
-              className="sc-hKMtZM cVRgZO"
+              className="sc-eCYdqJ dkXXkk"
               htmlFor="2-label"
             >
               <input
                 checked={false}
-                className="sc-eCYdqJ hersNK"
+                className="sc-jSMfEi krwMNI"
                 id="2-label"
                 name="2"
                 onChange={[Function]}
@@ -320,17 +320,17 @@ exports[`Storyshots UI/organisms/EndpointList Basic 1`] = `
                 value="1"
               />
               <span
-                className="sc-dkzDqf behqXB"
+                className="sc-hKMtZM jEgUfa"
               />
               label
             </label>
             <label
-              className="sc-hKMtZM cVRgZO"
+              className="sc-eCYdqJ dkXXkk"
               htmlFor="2-Global"
             >
               <input
                 checked={false}
-                className="sc-eCYdqJ hersNK"
+                className="sc-jSMfEi krwMNI"
                 id="2-Global"
                 name="2"
                 onChange={[Function]}
@@ -338,7 +338,7 @@ exports[`Storyshots UI/organisms/EndpointList Basic 1`] = `
                 value=""
               />
               <span
-                className="sc-dkzDqf behqXB"
+                className="sc-hKMtZM jEgUfa"
               />
               Global
             </label>
@@ -366,7 +366,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
       className="sc-fEOsli jUwieR"
     >
       <button
-        className="sc-jSMfEi iOmVlp"
+        className="sc-gKXOVf akMNI"
         title="Close"
       >
         <svg
@@ -425,37 +425,36 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
     className="sc-crXcEl kQvrzl"
   >
     <div
-      className="sc-iBkjds jUhoJF"
+      className="sc-ftvSup csqyPG"
     >
       <button
-        className="sc-ftvSup gdfGrv"
+        className="sc-papXJ frszRY"
         onClick={[Function]}
         type="button"
       >
-        <p
-          className="sc-papXJ kwkYmf"
+        <span
+          className="sc-jqUVSM eFrPeG"
         >
           All methods
-        </p>
-        <div
-          className="sc-jqUVSM bcYAES"
+        </span>
+        <span
+          className="sc-gsnTZi jnQcjM"
         >
           <svg
             fill="none"
-            height="24px"
-            viewBox="0 0 24 24"
-            width="24px"
+            height={24}
+            width={24}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M4 8L12 16L20 8"
-              stroke="#000"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              d="M6 9l6 6 6-6"
+              stroke="#333"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
             />
           </svg>
-        </div>
+        </span>
       </button>
     </div>
     <div
@@ -463,7 +462,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
     />
     <input
       autoComplete="off"
-      className="sc-evZas gQkund"
+      className="sc-evZas iUAVlN"
       onChange={[Function]}
       placeholder="Search path..."
       value=""
@@ -471,7 +470,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
     
   </div>
   <div
-    className="sc-gKXOVf dKcEah"
+    className="sc-iBkjds bwlPPp"
   >
     <table
       className="sc-bBrHrO kXCIMB"
@@ -490,12 +489,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="default-Local"
               >
                 <input
                   checked={true}
-                  className="sc-eCYdqJ feA-Dur"
+                  className="sc-jSMfEi fMHyaV"
                   id="default-Local"
                   name="default"
                   onChange={[Function]}
@@ -503,17 +502,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf gplSTQ"
+                  className="sc-hKMtZM bOBNTr"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="default-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ feA-Dur"
+                  className="sc-jSMfEi fMHyaV"
                   id="default-Prod"
                   name="default"
                   onChange={[Function]}
@@ -521,17 +520,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf gplSTQ"
+                  className="sc-hKMtZM bOBNTr"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="default-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ feA-Dur"
+                  className="sc-jSMfEi fMHyaV"
                   id="default-Dev"
                   name="default"
                   onChange={[Function]}
@@ -539,17 +538,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf gplSTQ"
+                  className="sc-hKMtZM bOBNTr"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="default-Default"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ feA-Dur"
+                  className="sc-jSMfEi fMHyaV"
                   id="default-Default"
                   name="default"
                   onChange={[Function]}
@@ -557,7 +556,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf gplSTQ"
+                  className="sc-hKMtZM bOBNTr"
                 />
                 Default
               </label>
@@ -570,7 +569,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
             align="right"
           >
             <button
-              className="sc-jSMfEi gbTYib"
+              className="sc-gKXOVf isxFyK"
               onClick={[Function]}
               title="reset to default"
             >
@@ -582,7 +581,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
     </table>
   </div>
   <div
-    className="sc-gKXOVf dKcEah"
+    className="sc-iBkjds FlDag"
   >
     <table
       className="sc-dmRaPn dshnNP"
@@ -609,12 +608,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="0-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="0-Local"
                   name="0"
                   onChange={[Function]}
@@ -622,17 +621,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="0-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="0-Prod"
                   name="0"
                   onChange={[Function]}
@@ -640,17 +639,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="0-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="0-Dev"
                   name="0"
                   onChange={[Function]}
@@ -658,17 +657,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="0-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="0-Global"
                   name="0"
                   onChange={[Function]}
@@ -676,7 +675,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -704,12 +703,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="1-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="1-Local"
                   name="1"
                   onChange={[Function]}
@@ -717,17 +716,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="1-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="1-Prod"
                   name="1"
                   onChange={[Function]}
@@ -735,17 +734,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="1-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="1-Dev"
                   name="1"
                   onChange={[Function]}
@@ -753,17 +752,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="1-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="1-Global"
                   name="1"
                   onChange={[Function]}
@@ -771,7 +770,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -799,12 +798,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="2-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="2-Local"
                   name="2"
                   onChange={[Function]}
@@ -812,17 +811,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="2-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="2-Prod"
                   name="2"
                   onChange={[Function]}
@@ -830,17 +829,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="2-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="2-Dev"
                   name="2"
                   onChange={[Function]}
@@ -848,17 +847,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="2-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="2-Global"
                   name="2"
                   onChange={[Function]}
@@ -866,7 +865,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -894,12 +893,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="3-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="3-Local"
                   name="3"
                   onChange={[Function]}
@@ -907,17 +906,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="3-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="3-Prod"
                   name="3"
                   onChange={[Function]}
@@ -925,17 +924,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="3-Dev"
               >
                 <input
                   checked={true}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="3-Dev"
                   name="3"
                   onChange={[Function]}
@@ -943,17 +942,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="3-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="3-Global"
                   name="3"
                   onChange={[Function]}
@@ -961,7 +960,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -989,12 +988,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="4-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="4-Local"
                   name="4"
                   onChange={[Function]}
@@ -1002,17 +1001,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="4-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="4-Prod"
                   name="4"
                   onChange={[Function]}
@@ -1020,17 +1019,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="4-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="4-Dev"
                   name="4"
                   onChange={[Function]}
@@ -1038,17 +1037,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="4-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="4-Global"
                   name="4"
                   onChange={[Function]}
@@ -1056,7 +1055,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -1084,12 +1083,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="5-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="5-Local"
                   name="5"
                   onChange={[Function]}
@@ -1097,17 +1096,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="5-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="5-Prod"
                   name="5"
                   onChange={[Function]}
@@ -1115,17 +1114,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="5-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="5-Dev"
                   name="5"
                   onChange={[Function]}
@@ -1133,17 +1132,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="5-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="5-Global"
                   name="5"
                   onChange={[Function]}
@@ -1151,7 +1150,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -1179,12 +1178,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="6-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="6-Local"
                   name="6"
                   onChange={[Function]}
@@ -1192,17 +1191,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="6-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="6-Prod"
                   name="6"
                   onChange={[Function]}
@@ -1210,17 +1209,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="6-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="6-Dev"
                   name="6"
                   onChange={[Function]}
@@ -1228,17 +1227,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="6-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="6-Global"
                   name="6"
                   onChange={[Function]}
@@ -1246,7 +1245,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -1274,12 +1273,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="7-Local"
               >
                 <input
                   checked={true}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="7-Local"
                   name="7"
                   onChange={[Function]}
@@ -1287,17 +1286,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="7-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="7-Prod"
                   name="7"
                   onChange={[Function]}
@@ -1305,17 +1304,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="7-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="7-Dev"
                   name="7"
                   onChange={[Function]}
@@ -1323,17 +1322,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="7-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="7-Global"
                   name="7"
                   onChange={[Function]}
@@ -1341,7 +1340,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -1369,12 +1368,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="8-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="8-Local"
                   name="8"
                   onChange={[Function]}
@@ -1382,17 +1381,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="8-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="8-Prod"
                   name="8"
                   onChange={[Function]}
@@ -1400,17 +1399,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="8-Dev"
               >
                 <input
                   checked={true}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="8-Dev"
                   name="8"
                   onChange={[Function]}
@@ -1418,17 +1417,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="8-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="8-Global"
                   name="8"
                   onChange={[Function]}
@@ -1436,7 +1435,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -1464,12 +1463,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="9-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="9-Local"
                   name="9"
                   onChange={[Function]}
@@ -1477,17 +1476,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="9-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="9-Prod"
                   name="9"
                   onChange={[Function]}
@@ -1495,17 +1494,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="9-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="9-Dev"
                   name="9"
                   onChange={[Function]}
@@ -1513,17 +1512,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="9-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="9-Global"
                   name="9"
                   onChange={[Function]}
@@ -1531,7 +1530,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -1559,12 +1558,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="10-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="10-Local"
                   name="10"
                   onChange={[Function]}
@@ -1572,17 +1571,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="10-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="10-Prod"
                   name="10"
                   onChange={[Function]}
@@ -1590,17 +1589,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="10-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="10-Dev"
                   name="10"
                   onChange={[Function]}
@@ -1608,17 +1607,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="10-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="10-Global"
                   name="10"
                   onChange={[Function]}
@@ -1626,7 +1625,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -1654,12 +1653,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="11-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="11-Local"
                   name="11"
                   onChange={[Function]}
@@ -1667,17 +1666,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="11-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="11-Prod"
                   name="11"
                   onChange={[Function]}
@@ -1685,17 +1684,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="11-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="11-Dev"
                   name="11"
                   onChange={[Function]}
@@ -1703,17 +1702,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="11-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="11-Global"
                   name="11"
                   onChange={[Function]}
@@ -1721,7 +1720,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -1749,12 +1748,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="12-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="12-Local"
                   name="12"
                   onChange={[Function]}
@@ -1762,17 +1761,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="12-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="12-Prod"
                   name="12"
                   onChange={[Function]}
@@ -1780,17 +1779,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="12-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="12-Dev"
                   name="12"
                   onChange={[Function]}
@@ -1798,17 +1797,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="12-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="12-Global"
                   name="12"
                   onChange={[Function]}
@@ -1816,7 +1815,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -1844,12 +1843,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="13-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="13-Local"
                   name="13"
                   onChange={[Function]}
@@ -1857,17 +1856,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="13-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="13-Prod"
                   name="13"
                   onChange={[Function]}
@@ -1875,17 +1874,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="13-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="13-Dev"
                   name="13"
                   onChange={[Function]}
@@ -1893,17 +1892,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="13-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="13-Global"
                   name="13"
                   onChange={[Function]}
@@ -1911,7 +1910,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -1939,12 +1938,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="14-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="14-Local"
                   name="14"
                   onChange={[Function]}
@@ -1952,17 +1951,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="14-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="14-Prod"
                   name="14"
                   onChange={[Function]}
@@ -1970,17 +1969,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="14-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="14-Dev"
                   name="14"
                   onChange={[Function]}
@@ -1988,17 +1987,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="14-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="14-Global"
                   name="14"
                   onChange={[Function]}
@@ -2006,7 +2005,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -2034,12 +2033,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="15-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="15-Local"
                   name="15"
                   onChange={[Function]}
@@ -2047,17 +2046,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="15-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="15-Prod"
                   name="15"
                   onChange={[Function]}
@@ -2065,17 +2064,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="15-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="15-Dev"
                   name="15"
                   onChange={[Function]}
@@ -2083,17 +2082,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="15-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="15-Global"
                   name="15"
                   onChange={[Function]}
@@ -2101,7 +2100,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -2129,12 +2128,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="16-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="16-Local"
                   name="16"
                   onChange={[Function]}
@@ -2142,17 +2141,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="16-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="16-Prod"
                   name="16"
                   onChange={[Function]}
@@ -2160,17 +2159,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="16-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="16-Dev"
                   name="16"
                   onChange={[Function]}
@@ -2178,17 +2177,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="16-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="16-Global"
                   name="16"
                   onChange={[Function]}
@@ -2196,7 +2195,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -2224,12 +2223,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="17-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="17-Local"
                   name="17"
                   onChange={[Function]}
@@ -2237,17 +2236,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="17-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="17-Prod"
                   name="17"
                   onChange={[Function]}
@@ -2255,17 +2254,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="17-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="17-Dev"
                   name="17"
                   onChange={[Function]}
@@ -2273,17 +2272,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="17-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="17-Global"
                   name="17"
                   onChange={[Function]}
@@ -2291,7 +2290,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -2319,12 +2318,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="18-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="18-Local"
                   name="18"
                   onChange={[Function]}
@@ -2332,17 +2331,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="18-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="18-Prod"
                   name="18"
                   onChange={[Function]}
@@ -2350,17 +2349,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="18-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="18-Dev"
                   name="18"
                   onChange={[Function]}
@@ -2368,17 +2367,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="18-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="18-Global"
                   name="18"
                   onChange={[Function]}
@@ -2386,7 +2385,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -2414,12 +2413,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="19-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="19-Local"
                   name="19"
                   onChange={[Function]}
@@ -2427,17 +2426,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="19-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="19-Prod"
                   name="19"
                   onChange={[Function]}
@@ -2445,17 +2444,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="19-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="19-Dev"
                   name="19"
                   onChange={[Function]}
@@ -2463,17 +2462,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="19-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="19-Global"
                   name="19"
                   onChange={[Function]}
@@ -2481,7 +2480,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -2509,12 +2508,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="20-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="20-Local"
                   name="20"
                   onChange={[Function]}
@@ -2522,17 +2521,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="20-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="20-Prod"
                   name="20"
                   onChange={[Function]}
@@ -2540,17 +2539,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="20-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="20-Dev"
                   name="20"
                   onChange={[Function]}
@@ -2558,17 +2557,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="20-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="20-Global"
                   name="20"
                   onChange={[Function]}
@@ -2576,7 +2575,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -2604,12 +2603,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="21-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="21-Local"
                   name="21"
                   onChange={[Function]}
@@ -2617,17 +2616,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="21-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="21-Prod"
                   name="21"
                   onChange={[Function]}
@@ -2635,17 +2634,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="21-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="21-Dev"
                   name="21"
                   onChange={[Function]}
@@ -2653,17 +2652,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="21-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="21-Global"
                   name="21"
                   onChange={[Function]}
@@ -2671,7 +2670,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -2699,12 +2698,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="22-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="22-Local"
                   name="22"
                   onChange={[Function]}
@@ -2712,17 +2711,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="22-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="22-Prod"
                   name="22"
                   onChange={[Function]}
@@ -2730,17 +2729,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="22-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="22-Dev"
                   name="22"
                   onChange={[Function]}
@@ -2748,17 +2747,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="22-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="22-Global"
                   name="22"
                   onChange={[Function]}
@@ -2766,7 +2765,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -2794,12 +2793,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="23-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="23-Local"
                   name="23"
                   onChange={[Function]}
@@ -2807,17 +2806,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="23-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="23-Prod"
                   name="23"
                   onChange={[Function]}
@@ -2825,17 +2824,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="23-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="23-Dev"
                   name="23"
                   onChange={[Function]}
@@ -2843,17 +2842,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="23-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="23-Global"
                   name="23"
                   onChange={[Function]}
@@ -2861,7 +2860,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -2889,12 +2888,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="24-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="24-Local"
                   name="24"
                   onChange={[Function]}
@@ -2902,17 +2901,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="24-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="24-Prod"
                   name="24"
                   onChange={[Function]}
@@ -2920,17 +2919,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="24-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="24-Dev"
                   name="24"
                   onChange={[Function]}
@@ -2938,17 +2937,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="24-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="24-Global"
                   name="24"
                   onChange={[Function]}
@@ -2956,7 +2955,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -2984,12 +2983,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="25-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="25-Local"
                   name="25"
                   onChange={[Function]}
@@ -2997,17 +2996,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="25-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="25-Prod"
                   name="25"
                   onChange={[Function]}
@@ -3015,17 +3014,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="25-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="25-Dev"
                   name="25"
                   onChange={[Function]}
@@ -3033,17 +3032,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="25-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="25-Global"
                   name="25"
                   onChange={[Function]}
@@ -3051,7 +3050,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -3079,12 +3078,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="26-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="26-Local"
                   name="26"
                   onChange={[Function]}
@@ -3092,17 +3091,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="26-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="26-Prod"
                   name="26"
                   onChange={[Function]}
@@ -3110,17 +3109,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="26-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="26-Dev"
                   name="26"
                   onChange={[Function]}
@@ -3128,17 +3127,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="26-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="26-Global"
                   name="26"
                   onChange={[Function]}
@@ -3146,7 +3145,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -3174,12 +3173,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="27-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="27-Local"
                   name="27"
                   onChange={[Function]}
@@ -3187,17 +3186,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="27-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="27-Prod"
                   name="27"
                   onChange={[Function]}
@@ -3205,17 +3204,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="27-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="27-Dev"
                   name="27"
                   onChange={[Function]}
@@ -3223,17 +3222,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="27-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="27-Global"
                   name="27"
                   onChange={[Function]}
@@ -3241,7 +3240,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -3269,12 +3268,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="28-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="28-Local"
                   name="28"
                   onChange={[Function]}
@@ -3282,17 +3281,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="28-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="28-Prod"
                   name="28"
                   onChange={[Function]}
@@ -3300,17 +3299,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="28-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="28-Dev"
                   name="28"
                   onChange={[Function]}
@@ -3318,17 +3317,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="28-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="28-Global"
                   name="28"
                   onChange={[Function]}
@@ -3336,7 +3335,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -3364,12 +3363,12 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
               className="sc-bjUoiL eZJmLb"
             >
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="29-Local"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="29-Local"
                   name="29"
                   onChange={[Function]}
@@ -3377,17 +3376,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="local"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Local
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="29-Prod"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="29-Prod"
                   name="29"
                   onChange={[Function]}
@@ -3395,17 +3394,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="prod"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Prod
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="29-Dev"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="29-Dev"
                   name="29"
                   onChange={[Function]}
@@ -3413,17 +3412,17 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value="dev"
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Dev
               </label>
               <label
-                className="sc-hKMtZM cVRgZO"
+                className="sc-eCYdqJ dkXXkk"
                 htmlFor="29-Global"
               >
                 <input
                   checked={false}
-                  className="sc-eCYdqJ hersNK"
+                  className="sc-jSMfEi krwMNI"
                   id="29-Global"
                   name="29"
                   onChange={[Function]}
@@ -3431,7 +3430,7 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
                   value=""
                 />
                 <span
-                  className="sc-dkzDqf behqXB"
+                  className="sc-hKMtZM jEgUfa"
                 />
                 Global
               </label>
@@ -3446,37 +3445,36 @@ exports[`Storyshots UI/organisms/Panel Basic 1`] = `
 
 exports[`Storyshots ui/flows/search-input/atoms/MethodSelect Basic 1`] = `
 <div
-  className="sc-iBkjds jUhoJF"
+  className="sc-ftvSup csqyPG"
 >
   <button
-    className="sc-ftvSup gdfGrv"
+    className="sc-papXJ frszRY"
     onClick={[Function]}
     type="button"
   >
-    <p
-      className="sc-papXJ kwkYmf"
+    <span
+      className="sc-jqUVSM eFrPeG"
     >
       All methods
-    </p>
-    <div
-      className="sc-jqUVSM bcYAES"
+    </span>
+    <span
+      className="sc-gsnTZi jnQcjM"
     >
       <svg
         fill="none"
-        height="24px"
-        viewBox="0 0 24 24"
-        width="24px"
+        height={24}
+        width={24}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M4 8L12 16L20 8"
-          stroke="#000"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          d="M6 9l6 6 6-6"
+          stroke="#333"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
         />
       </svg>
-    </div>
+    </span>
   </button>
 </div>
 `;
@@ -3486,37 +3484,36 @@ exports[`Storyshots ui/flows/search-input/molecules/SearchInput Basic 1`] = `
   className="sc-crXcEl kQvrzl"
 >
   <div
-    className="sc-iBkjds jUhoJF"
+    className="sc-ftvSup csqyPG"
   >
     <button
-      className="sc-ftvSup gdfGrv"
+      className="sc-papXJ frszRY"
       onClick={[Function]}
       type="button"
     >
-      <p
-        className="sc-papXJ kwkYmf"
+      <span
+        className="sc-jqUVSM eFrPeG"
       >
         All methods
-      </p>
-      <div
-        className="sc-jqUVSM bcYAES"
+      </span>
+      <span
+        className="sc-gsnTZi jnQcjM"
       >
         <svg
           fill="none"
-          height="24px"
-          viewBox="0 0 24 24"
-          width="24px"
+          height={24}
+          width={24}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M4 8L12 16L20 8"
-            stroke="#000"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            d="M6 9l6 6 6-6"
+            stroke="#333"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
           />
         </svg>
-      </div>
+      </span>
     </button>
   </div>
   <div
@@ -3524,7 +3521,7 @@ exports[`Storyshots ui/flows/search-input/molecules/SearchInput Basic 1`] = `
   />
   <input
     autoComplete="off"
-    className="sc-evZas gQkund"
+    className="sc-evZas iUAVlN"
     onChange={[Function]}
     placeholder="Search path..."
     value="some value"

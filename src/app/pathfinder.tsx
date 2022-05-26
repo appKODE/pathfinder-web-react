@@ -1,4 +1,10 @@
-import React, { Fragment, useCallback, useEffect, useMemo, useState } from 'react';
+import React, {
+  Fragment,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 import {
   createPathFinder,
   DataResolver,
@@ -39,6 +45,7 @@ const Content = styled.div`
   position: relative;
   top: 50%;
   left: 50%;
+  max-width: 85vw;
   transform: translate(-50%, -50%);
   z-index: 25;
   padding: 16px;

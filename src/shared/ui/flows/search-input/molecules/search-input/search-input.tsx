@@ -22,11 +22,13 @@ const StyledInput = styled.input`
   background-color: transparent;
   border: none;
   outline: none;
-  width: 300px;
+  width: 100%;
   margin-right: 50px;
   height: 25px;
   font-size: 16px;
   user-select: none;
+  caret-color: ${({ theme }) => theme.colors.digital.blue.normal};
+  color: ${({ theme }) => theme.colors.main.dark.normal};
 `;
 
 const CloseIconWrap = styled.div`
