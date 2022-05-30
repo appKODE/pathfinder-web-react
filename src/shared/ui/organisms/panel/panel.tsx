@@ -1,14 +1,20 @@
 import React, { useMemo, useState, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
 
-import { ScrollWrapper, Button } from '../../atoms';
+import { Button } from '../../atoms';
 import { Header, UploadSpec, RadioGroup } from '../../molecules';
 import { EndpointsList } from '..';
 import { TRadioOptions } from '../../atoms/radio-input/types';
 import { TConfig } from './types';
 import { SearchInput } from '../../flows';
-import { TUrlItem } from '../endpoints-list/types';
+import {
+  THeadersChangeHandler,
+  TUrlHeaders,
+  TUrlItem,
+} from '../endpoints-list/types';
 import { UrlMethod } from '@kode-frontend/pathfinder-web-core';
+import { Box, Row } from '../../core';
+import { KeyValueField } from '../../molecules/key-value-field';
 
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.main.light.normal};
@@ -34,15 +40,22 @@ const Text = styled.span`
   text-transform: uppercase;
 `;
 
+const RightControls = styled(Row)`
+  justify-content: end;
+`;
+
 type Props = {
   config: TConfig;
-  defaultEnvId: string;
+  defaultEnvId: string | null;
   urlEnvInitialValues: Record<string, string>;
-
+  defaultHeaders: string;
+  urlHeaders: TUrlHeaders;
   onClose: () => void;
   onChangeDefaultEnv: (envId: string | null) => void;
   onChangeUrlEnv: (urlId: string, envId?: string) => void;
   onLoadSpec: (data: unknown) => void;
+  onChangeDefaultHeaders: (headers: string) => void;
+  onChangeEndpointHeaders: THeadersChangeHandler;
   onResetOptions: () => void;
 };
 
@@ -50,10 +63,14 @@ export const Panel = ({
   config,
   defaultEnvId,
   urlEnvInitialValues,
+  defaultHeaders,
+  urlHeaders,
   onClose,
   onChangeDefaultEnv,
   onChangeUrlEnv,
   onLoadSpec,
+  onChangeDefaultHeaders,
+  onChangeEndpointHeaders,
   onResetOptions,
 }: Props) => {
   const [defaultEnv, setDefaultValue] = useState<string>(defaultEnvId || '');
@@ -69,7 +86,7 @@ export const Panel = ({
 
   const onHandleChange = (value: string) => {
     setSearchValue(value);
-  }
+  };
 
   const environments = useMemo<TRadioOptions[]>(
     () =>
@@ -88,14 +105,14 @@ export const Panel = ({
   const onClearHandler = () => {
     setFilteredPaths(config.urlList);
     setSearchValue('');
-  }
+  };
 
   const onSelectMethod = (selectedMethod: UrlMethod | null) => {
     if (!selectedMethod) {
       return setFilteredMethods(methods);
     }
     setFilteredMethods(methods.filter((method) => method === selectedMethod));
-  }
+  };
 
   useEffect(() => {
     setFilteredPaths(
@@ -119,14 +136,21 @@ export const Panel = ({
         onHandleChange={onHandleChange}
       />
       {environments.length > 0 && (
-        <ScrollWrapper>
-          <DefaultControls>
-            <tbody>
-              <tr>
-                <td>
-                  <Text>Use the requests environment for all requests:</Text>
-                </td>
-                <td>
+        <DefaultControls>
+          <tbody>
+            <tr>
+              <td>
+                <Text>Use the requests environment for all requests:</Text>
+              </td>
+              <td>
+                <RightControls>
+                  <KeyValueField
+                    title="Headers"
+                    placeholder="Enter each header on a new line. &#10;For example:&#10;Authorization: Bearer 123&#10;Prefer: code=200, dynamic=true"
+                    onApply={onChangeDefaultHeaders}
+                    initialValue={defaultHeaders}
+                  />
+                  <Box w={16} />
                   <RadioGroup
                     id={'default'}
                     value={defaultEnv}
@@ -143,11 +167,7 @@ export const Panel = ({
                       },
                     ]}
                   />
-                </td>
-              </tr>
-              <tr>
-                <td></td>
-                <td align="right">
+                  <Box w={16} />
                   <Button
                     active
                     title="reset to default"
@@ -155,18 +175,20 @@ export const Panel = ({
                   >
                     reset to default
                   </Button>
-                </td>
-              </tr>
-            </tbody>
-          </DefaultControls>
-        </ScrollWrapper>
+                </RightControls>
+              </td>
+            </tr>
+          </tbody>
+        </DefaultControls>
       )}
       {config.urlList.length > 0 && (
         <EndpointsList
-          onChange={onChangeUrlEnv}
+          headers={urlHeaders}
           environments={environments}
           items={filteredPaths}
           initialValues={urlEnvInitialValues}
+          onBasePathChange={onChangeUrlEnv}
+          onHeadersChange={onChangeEndpointHeaders}
         />
       )}
     </Wrapper>
