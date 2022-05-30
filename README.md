@@ -108,6 +108,34 @@ export const PathfinderProvider = ({ children }: Props) => {
 };
 ```
 
+Create `PathfinderProvider`, for example
+
+```jsx
+import * as React from 'react';
+import { Pathfinder } from '@kode-frontend/pathfinder-web-react';
+
+import storage from '@kode-frontend/pathfinder-web-local-storage';
+import { openApiResolver } from '@kode-frontend/pathfinder-web-open-api';
+
+type Props = {
+  children: React.ReactNode,
+};
+
+export const PathfinderProvider = ({ children }: Props) => {
+  return (
+    <Pathfinder
+      children={<>{children}</>}
+      resolver={openApiResolver}
+      storage={storage}
+      active={process.env.NODE_ENV !== 'production'}
+      dataKey={'pathfinder-storage-key'}
+    />
+  );
+};
+
+// dataKey - The key witch will use for storing pathfinder data. It can use for versioning storage by with app version.
+```
+
 Import `PathfinderProvider` and render it around your whole app:
 
 ```jsx

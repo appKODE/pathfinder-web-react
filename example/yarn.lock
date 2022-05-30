@@ -893,12 +893,17 @@
   resolved "https://registry.npmjs.org/@kode-frontend/pathfinder-web-core/-/pathfinder-web-core-0.0.11.tgz"
   integrity sha512-lyH1XhDq4pNNJHAIVm07mBFmadOvvMxQd6G+Ps+t3/GT6WamhLIKMw0WQPGN0IU5Zn+xuM0HITCytmqaJGe1iw==
 
-"@kode-frontend/pathfinder-web-local-storage@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@kode-frontend/pathfinder-web-local-storage/-/pathfinder-web-local-storage-0.1.0.tgz#3595a5db4ac9e0e4155ee316869027171e990210"
-  integrity sha512-ZObTGBagGffW2EIYyyL6xskcIpP4jc1Iz5gH95iEpurh3IoQ6TFpw+qI/2WUPgz4NNf4HSaw3m0bHcTUexFUMw==
+"@kode-frontend/pathfinder-web-core@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@kode-frontend/pathfinder-web-core/-/pathfinder-web-core-1.0.0.tgz#e8479ee417015132e7aa8de5ba667d0cbd7adb06"
+  integrity sha512-6e0flQ1qwXdBwduLANB6uEoJ3lYagFd+X/zuxLaMTc1E6U5RjyzYsjPzS1cOUXuErZxOB9qmuS04Og9oN30Qgg==
+
+"@kode-frontend/pathfinder-web-local-storage@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@kode-frontend/pathfinder-web-local-storage/-/pathfinder-web-local-storage-1.0.1.tgz#23c364fbaf5e456a45903ff1c2cfffa8566841db"
+  integrity sha512-H6F1QlAFY8GS7A9SUYqUtTcQEfGqgIpycGzukgafJuiLwI1MLA+zICEBr7P9QWyk6I2Fz7igZZSQL/qpJtSgjQ==
   dependencies:
-    "@kode-frontend/pathfinder-web-core" "^0.0.11"
+    "@kode-frontend/pathfinder-web-core" "^1.0.0"
 
 "@kode-frontend/pathfinder-web-open-api@^0.1.1":
   version "0.1.1"
