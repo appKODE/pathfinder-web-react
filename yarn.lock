@@ -1530,10 +1530,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@kode-frontend/pathfinder-web-core@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/@kode-frontend/pathfinder-web-core/-/pathfinder-web-core-0.0.11.tgz#e48b37ac80f9107cf639936ee9a18d8f049248d5"
-  integrity sha512-lyH1XhDq4pNNJHAIVm07mBFmadOvvMxQd6G+Ps+t3/GT6WamhLIKMw0WQPGN0IU5Zn+xuM0HITCytmqaJGe1iw==
+"@kode-frontend/pathfinder-web-core@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@kode-frontend/pathfinder-web-core/-/pathfinder-web-core-1.1.2.tgz#1c9604f88336f74f41c32887991f5e7a61af6376"
+  integrity sha512-CobogIJOTeLFSoQC/zbQHABPmqqh+6xOGYVnGqn/YovJ1nzsSkOI1d4MD0COtEdeaxUi/S8NxuunvnrlosoRvQ==
 
 "@mdx-js/loader@^1.6.22":
   version "1.6.22"

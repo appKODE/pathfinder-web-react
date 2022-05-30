@@ -11,3 +11,8 @@ export type TConfig = {
   envList: TPanelEnv[];
   urlList: TPanelUrl[];
 };
+
+export type THeader = {
+  key: string;
+  value: string;
+};
