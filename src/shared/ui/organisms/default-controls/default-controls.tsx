@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   padding: 8px;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 `;
 
 const ControlsWrapper = styled.div`
@@ -16,17 +17,34 @@ const ControlsWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    flex-wrap: wrap;
+  }
+`;
+
+const HeadersWrapper = styled.div`
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    margin-left: auto;
+    margin-right: 16px;
+  }
 `;
 
 const Text = styled.p`
+  margin: 0;
   display: block;
   min-width: 300px;
   font-size: 14px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    width: 100%;
+  }
 `;
 
 const ButtonWrapper = styled.div`
+  padding-bottom: 8px;
   align-self: flex-end;
 `;
 
@@ -51,12 +69,16 @@ export const DefaultControls = ({
     <Wrapper>
       <ControlsWrapper>
         <Text>Use the requests environment for all requests:</Text>
-        <KeyValueField
-          title="Headers"
-          placeholder="Enter each header on a new line. &#10;For example:&#10;Authorization: Bearer 123&#10;Prefer: code=200, dynamic=true"
-          onApply={onChangeDefaultHeaders}
-          initialValue={defaultHeaders}
-        />
+
+        <HeadersWrapper>
+          <KeyValueField
+            title="Headers"
+            placeholder="Enter each header on a new line. &#10;For example:&#10;Authorization: Bearer 123&#10;Prefer: code=200, dynamic=true"
+            onApply={onChangeDefaultHeaders}
+            initialValue={defaultHeaders}
+          />
+        </HeadersWrapper>
+
         <RadioGroup
           id={'default'}
           value={defaultEnv}
