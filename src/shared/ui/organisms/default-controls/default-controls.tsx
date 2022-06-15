@@ -83,7 +83,7 @@ export const DefaultControls = ({
           id={'default'}
           value={defaultEnv}
           color={'red'}
-          onChange={onChangeDefaultEnv}
+          onChange={(_, value) => onChangeDefaultEnv(value)}
           items={[
             ...environments,
             {
