@@ -1,5 +1,7 @@
 
 
+### [0.3.1](https://https//github.com/appKODE/pathfinder-web-react/compare/v0.3.0...v0.3.1) (2022-05-31)
+
 ## [0.3.0](https://https//github.com/appKODE/pathfinder-web-react/compare/v0.2.0...v0.3.0) (2022-05-05)
 
 

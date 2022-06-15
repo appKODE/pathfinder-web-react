@@ -22,6 +22,8 @@ import { TPanelEnv, TPanelUrl } from '../shared/ui/organisms/panel/types';
 
 import { addConsoleActivation } from '../features';
 import { useRequestInterception } from '../processes';
+import { parseHeaders } from '../shared/lib';
+import { stringifyHeaders } from '../shared/lib/stringify-headers';
 
 const ActionWrapper = styled.div`
   position: fixed;
@@ -72,6 +74,7 @@ type PathfinderProviderProps = {
   children: JSX.Element;
   storage: DataStorage;
   resolver: DataResolver;
+  dataKey: string;
   active?: boolean;
 };
 
@@ -90,13 +93,30 @@ export const Pathfinder = ({
   children,
   resolver,
   storage,
+  dataKey,
   active,
 }: PathfinderProviderProps) => {
   const module = useMemo(() => {
-    return createPathFinder(resolver, storage);
+    return createPathFinder({ data: storage, dataKey, resolver });
   }, [resolver, storage]);
+  const [spec, setSpec] = useState<Spec | null>(module.getSpec());
+  const [globalHeaders, setGlobalHeaders] = useState<string>(
+    stringifyHeaders(module.getGlobalHeaders())
+  );
 
-  const [spec, setSpec] = useState<Spec | undefined>(module.getSpec());
+  const endpointsHeadersDefault =
+    module.getSpec()?.urls.reduce(
+      (acc, endpoint) => ({
+        ...acc,
+        [endpoint.id]: stringifyHeaders(module.getEndpointHeaders(endpoint.id)),
+      }),
+      {}
+    ) || {};
+
+  const [endpointsHeaders, setEndpointsHeaders] = useState<
+    Record<string, string>
+  >(endpointsHeadersDefault);
+
   const [isOpen, setOpen] = useState(false);
   const [isActive, setActive] = useState(active);
 
@@ -141,9 +161,21 @@ export const Pathfinder = ({
 
   config.urlList.forEach((url) => {
     const envId = module.getUrlEnv(url.id);
-
     initialUrlValues[url.id] = envId || '';
   });
+
+  const onChangeDefaultHeadersHandler = (value: string) => {
+    const headers = parseHeaders(value);
+    setGlobalHeaders(stringifyHeaders(headers));
+    module.setGlobalHeaders(headers);
+  };
+
+  const onChangeEndpointHeadersHandler = (value: string, id: string) => {
+    const headers = parseHeaders(value);
+
+    setEndpointsHeaders((prev) => ({ ...prev, [id]: value }));
+    module.setEndpointHeaders(id, headers);
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -156,13 +188,17 @@ export const Pathfinder = ({
           <Overlay />
           <Content>
             <Panel
+              urlHeaders={endpointsHeaders}
               config={config}
-              defaultEnvId={module.getGlobalEnv()}
               urlEnvInitialValues={initialUrlValues}
               onLoadSpec={handleLoadSpec}
+              defaultEnvId={module.getGlobalEnv()}
+              defaultHeaders={globalHeaders}
               onClose={handleToggle}
               onChangeDefaultEnv={handleChangeDefaultEnv}
               onChangeUrlEnv={handleChangeUrlEnv}
+              onChangeEndpointHeaders={onChangeEndpointHeadersHandler}
+              onChangeDefaultHeaders={onChangeDefaultHeadersHandler}
               onResetOptions={handleOnResetOptions}
             />
           </Content>
