@@ -23,6 +23,12 @@ export const theme = {
       red: { normal: '#E15A60', translucent: 'rgba(225, 90, 96, 0.5)' },
     },
   },
+  breakpoints: {
+    desktopLarge: 1900,
+    desktop: 1366,
+    tablet: 1024,
+    mobile: 320,
+  },
 };
 
 export type Theme = typeof theme;
