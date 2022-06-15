@@ -28,6 +28,11 @@ const args: Props = {
       template: '/user',
     },
   ],
+  headers: {
+    'get-user-profile': '',
+    'delete-user-profile': '',
+    'post-auth-login': '',
+  },
 };
 
 export default {

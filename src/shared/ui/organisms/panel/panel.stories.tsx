@@ -7,9 +7,9 @@ type Props = Partial<ComponentProps<typeof Panel>>;
 const args: Props = {
   config: {
     envList: [
-      { id: 'local', name: 'Local' },
-      { id: 'prod', name: 'Prod' },
-      { id: 'dev', name: 'Dev' },
+      { id: '0', name: 'Local' },
+      { id: '1', name: 'Prod' },
+      { id: '2', name: 'Dev' },
     ],
     urlList: Array(30)
       .fill(undefined)
@@ -20,12 +20,18 @@ const args: Props = {
         name: 'Endpoint Name',
       })),
   },
-  defaultEnvId: 'local',
+  defaultEnvId: '2',
   urlEnvInitialValues: {
-    3: 'dev',
-    7: 'local',
-    8: 'dev',
+    'get-user-profile': '',
+    'delete-user-profile': '',
+    'post-auth-login': '',
   },
+  urlHeaders: {
+    'get-user-profile': '',
+    'delete-user-profile': '',
+    'post-auth-login': '',
+  },
+  defaultHeaders: '',
 };
 
 export default {
