@@ -6,6 +6,29 @@ import {
 import { useEffect } from 'react';
 import { Header } from '@kode-frontend/pathfinder-web-core/dist/types';
 
+type TGetSameGlobalEndEndpointHeadersArg = {
+  globalHeaders: Header[];
+  endpointHeaders: Header[];
+};
+const mergeGlobalAndEndpointHeaders = ({
+  endpointHeaders,
+  globalHeaders,
+}: TGetSameGlobalEndEndpointHeadersArg): Record<string, string> => {
+  if (globalHeaders.length === 0) {
+    return endpointHeaders.reduce((acc, current) => {
+      return { ...acc, [current.key]: current.value };
+    }, {});
+  }
+
+  return globalHeaders.reduce((acc, current) => {
+    const endpointHeader = endpointHeaders.find((h) => h.key === current.key);
+
+    const headerValue = endpointHeader?.value || current.value;
+
+    return { ...acc, [current.key]: headerValue };
+  }, {});
+};
+
 export function useRequestInterception(
   pathfinder: Pathfinder,
   active: boolean
@@ -30,26 +53,21 @@ export function useRequestInterception(
           ? pathfinder.findSpec(matchers, method, url)
           : null;
 
-        let endpointHeaders: Header[] = [];
-
-        if (endpointSpec) {
-          endpointHeaders = pathfinder.getEndpointHeaders(endpointSpec.id);
-        }
+        const endpointHeaders: Header[] = endpointSpec
+          ? pathfinder.getEndpointHeaders(endpointSpec.id)
+          : [];
 
         const globalHeaders = pathfinder.getGlobalHeaders();
 
-        if (config?.headers && globalHeaders.length > 0) {
-          const newHEaders = globalHeaders.reduce((acc, current) => {
-            const endpointHeader = endpointHeaders.find(
-              (h) => h.key === current.key
-            );
+        const newHeaders = mergeGlobalAndEndpointHeaders({
+          globalHeaders,
+          endpointHeaders,
+        });
 
-            const headerValue = endpointHeader || current.value;
-
-            return { ...acc, [current.key]: headerValue };
-          }, {});
-
-          config.headers = { ...config.headers, ...newHEaders };
+        if (config?.headers) {
+          config.headers = { ...config.headers, ...newHeaders };
+        } else {
+          config = { ...config, headers: { ...newHeaders } };
         }
 
         const envSpecs = spec?.envs;
@@ -67,15 +85,12 @@ export function useRequestInterception(
   }, [pathfinder, active]);
 
   // XMLHttpRequest
-
-  /**
-   * TODO: Implement headers handling as in `fetch`
-   */
   useEffect(() => {
     if (!active) {
       return;
     }
     const open = XMLHttpRequest.prototype.open;
+    const setRequestHeader = XMLHttpRequest.prototype.setRequestHeader;
 
     XMLHttpRequest.prototype.open = function (
       method: string,
@@ -85,6 +100,16 @@ export function useRequestInterception(
       const spec = pathfinder.getSpec();
       const envSpecs = spec?.envs;
       const matchers = spec?.urls ? createUrlMatchers(spec.urls) : null;
+
+      const endpointSpec = matchers
+        ? pathfinder.findSpec(matchers, method.toUpperCase(), urlString)
+        : null;
+
+      const endpointHeaders: Header[] = endpointSpec
+        ? pathfinder.getEndpointHeaders(endpointSpec.id)
+        : [];
+
+      const globalHeaders = pathfinder.getGlobalHeaders();
 
       const newUrl = matchers
         ? pathfinder.buildUrl({
@@ -96,11 +121,24 @@ export function useRequestInterception(
         : urlString;
 
       arguments[1] = newUrl;
+
+      const newHeaders = mergeGlobalAndEndpointHeaders({
+        globalHeaders,
+        endpointHeaders,
+      });
+
       open.apply(this, arguments as any);
+
+      Object.getOwnPropertyNames(newHeaders).forEach((header) => {
+        if (newHeaders[header]) {
+          setRequestHeader.apply(this, [header, newHeaders[header]]);
+        }
+      });
     };
 
     return () => {
       XMLHttpRequest.prototype.open = open;
+      XMLHttpRequest.prototype.setRequestHeader = setRequestHeader;
     };
   }, [pathfinder, active]);
 }
