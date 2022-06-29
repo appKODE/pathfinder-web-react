@@ -1,5 +1,13 @@
 
 
+## [0.4.0](https://https//github.com/appKODE/pathfinder-web-react/compare/v0.3.1...v0.4.0) (2022-06-29)
+
+
+### Features
+
+* **userequestinterception:** add headers for XmlHttpRequest ([06673fd](https://https//github.com/appKODE/pathfinder-web-react/commit/06673fdb1fedef6d4ec8cfdf7a9a18345a6c2283))
+* **userequestinterception:** add headers for XmlHttpRequest ([c0059cc](https://https//github.com/appKODE/pathfinder-web-react/commit/c0059cc0eba3586dee99ec0a843fb298615cde88))
+
 ### [0.3.1](https://https//github.com/appKODE/pathfinder-web-react/compare/v0.3.0...v0.3.1) (2022-05-31)
 
 ## [0.3.0](https://https//github.com/appKODE/pathfinder-web-react/compare/v0.2.0...v0.3.0) (2022-05-05)
