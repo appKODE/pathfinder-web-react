@@ -8,7 +8,7 @@ export const TryForm = () => {
 
   const [result, setResult] = useState('');
 
-  const onSubmitHandler = async () => {
+  const onSubmitFetchHandler = async () => {
     const data = await fetch(value, {
       headers: {
         'Content-Type': 'application/json; charset=UTF-8',
@@ -21,6 +21,21 @@ export const TryForm = () => {
     setResult(json);
   };
 
+  const onSubmitXMLHttpRequestHandler = async () => {
+    function reqListener() {
+      try {
+        setResult(JSON.parse(this.responseText));
+      } catch (e) {
+        console.error(onSubmitXMLHttpRequestHandler, e);
+      }
+    }
+
+    var oReq = new XMLHttpRequest();
+    oReq.onload = reqListener;
+    oReq.open('get', value, true);
+    oReq.send();
+  };
+
   return (
     <>
       <input
@@ -28,7 +43,11 @@ export const TryForm = () => {
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
-      <button onClick={onSubmitHandler}>Submit</button>
+      <button onClick={onSubmitFetchHandler}>Submit Fetch</button>
+
+      <button onClick={onSubmitXMLHttpRequestHandler}>
+        Submit XMLHttpRequest
+      </button>
 
       <pre>{JSON.stringify(result, null, '\t')}</pre>
     </>
