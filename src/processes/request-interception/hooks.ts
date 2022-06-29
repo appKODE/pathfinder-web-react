@@ -6,14 +6,14 @@ import {
 import { useEffect } from 'react';
 import { Header } from '@kode-frontend/pathfinder-web-core/dist/types';
 
-type TGetSameGlobalEndEndpointHeadersArg = {
+type TMergeGlobalEndEndpointHeadersArg = {
   globalHeaders: Header[];
   endpointHeaders: Header[];
 };
 const mergeGlobalAndEndpointHeaders = ({
   endpointHeaders,
   globalHeaders,
-}: TGetSameGlobalEndEndpointHeadersArg): Record<string, string> => {
+}: TMergeGlobalEndEndpointHeadersArg): Record<string, string> => {
   if (globalHeaders.length === 0) {
     return endpointHeaders.reduce((acc, current) => {
       return { ...acc, [current.key]: current.value };
