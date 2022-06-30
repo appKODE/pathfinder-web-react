@@ -1,4 +1,8 @@
-export type TButtonVariant = 'active' | 'transparent' | 'normal';
+export type TButtonVariant =
+  | 'active'
+  | 'transparent'
+  | 'header'
+  | 'headerActive';
 
 export type TButtonColors = {
   background: string;

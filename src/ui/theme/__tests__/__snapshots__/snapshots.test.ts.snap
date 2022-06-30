@@ -219,6 +219,122 @@ exports[`Storyshots UI/molecules/UploadSpec Basic 1`] = `
 </label>
 `;
 
+exports[`Storyshots UI/organisms/DefaultControls Basic 1`] = `
+<div
+  className="sc-iIPllB hrNANu"
+>
+  <div
+    className="sc-gicCDI cMwzF"
+  >
+    <p
+      className="sc-bZkfAO hkYiVS"
+    >
+      Use the requests environment for all requests:
+    </p>
+    <div
+      className="sc-ezWOiH bGPLlm"
+    >
+      <div
+        className="sc-ivTmOn lGvzm"
+      >
+        <button
+          className="sc-gKXOVf iDcufc"
+          onClick={[Function]}
+        >
+          Headers
+        </button>
+      </div>
+    </div>
+    <div
+      className="sc-bjUoiL eZJmLb"
+    >
+      <label
+        className="sc-eCYdqJ dkXXkk"
+        htmlFor="default-Local"
+      >
+        <input
+          checked={false}
+          className="sc-jSMfEi fMHyaV"
+          id="default-Local"
+          name="default"
+          onChange={[Function]}
+          type="radio"
+          value="local"
+        />
+        <span
+          className="sc-hKMtZM bOBNTr"
+        />
+        Local
+      </label>
+      <label
+        className="sc-eCYdqJ dkXXkk"
+        htmlFor="default-Dev"
+      >
+        <input
+          checked={true}
+          className="sc-jSMfEi fMHyaV"
+          id="default-Dev"
+          name="default"
+          onChange={[Function]}
+          type="radio"
+          value="dev"
+        />
+        <span
+          className="sc-hKMtZM bOBNTr"
+        />
+        Dev
+      </label>
+      <label
+        className="sc-eCYdqJ dkXXkk"
+        htmlFor="default-Mock"
+      >
+        <input
+          checked={false}
+          className="sc-jSMfEi fMHyaV"
+          id="default-Mock"
+          name="default"
+          onChange={[Function]}
+          type="radio"
+          value="mock"
+        />
+        <span
+          className="sc-hKMtZM bOBNTr"
+        />
+        Mock
+      </label>
+      <label
+        className="sc-eCYdqJ dkXXkk"
+        htmlFor="default-Default"
+      >
+        <input
+          checked={false}
+          className="sc-jSMfEi fMHyaV"
+          id="default-Default"
+          name="default"
+          onChange={[Function]}
+          type="radio"
+          value=""
+        />
+        <span
+          className="sc-hKMtZM bOBNTr"
+        />
+        Default
+      </label>
+    </div>
+  </div>
+  <div
+    className="sc-kLLXSd khhRlZ"
+  >
+    <button
+      className="sc-gKXOVf kXduWD"
+      title="reset to default"
+    >
+      reset to default
+    </button>
+  </div>
+</div>
+`;
+
 exports[`Storyshots UI/organisms/EndpointList Basic 1`] = `
 <div
   className="sc-iBkjds FlDag"

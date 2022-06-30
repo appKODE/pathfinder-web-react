@@ -1,19 +1,14 @@
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
+
 import { useClickOutside } from '../../../hooks';
 import { Button } from '../../atoms';
 import { Box } from '../../core';
 
-type Props = {
-  title: string;
-  placeholder?: string;
-  initialValue: string;
-  onApply: (value: string) => void;
-};
-
 const Wrapper = styled.div`
   position: relative;
 `;
+
 const DropArea = styled.div`
   position: absolute;
   top: 0;
@@ -32,15 +27,12 @@ const TextArea = styled.textarea`
   padding: 8px;
 `;
 
-const Badge = styled.div`
-  height: 8px;
-  width: 8px;
-  background: ${({ theme }) => theme.colors.digital.red.normal};
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  border-radius: 50%;
-`;
+type Props = {
+  title: string;
+  placeholder?: string;
+  initialValue: string;
+  onApply: (value: string) => void;
+};
 
 export const KeyValueField = ({
   initialValue,
@@ -67,8 +59,12 @@ export const KeyValueField = ({
 
   return (
     <Wrapper ref={wrapperRef}>
-      <Button onClick={() => setIsOpen(true)}>{title}</Button>
-      {value && <Badge />}
+      <Button
+        variant={value ? 'headerActive' : 'header'}
+        onClick={() => setIsOpen(true)}
+      >
+        {title}
+      </Button>
 
       {isOpen && (
         <DropArea>
