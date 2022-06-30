@@ -16,7 +16,7 @@ const ButtonWrapper = styled.button<{
   align-content: center;
   justify-content: center;
   outline: none;
-  border: 1px solid ${({ $border }) => $border};
+  border: ${({ $border }) => $border};
   border-radius: 4px;
   background-color: ${({ $background }) => $background};
   color: ${({ $text }) => $text};
@@ -53,43 +53,49 @@ const ButtonWrapper = styled.button<{
 type Props = {
   children: ReactNode;
   title?: string;
-  transparent?: boolean;
+  variant?: TButtonVariant;
   active?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
 export const Button = memo(
-  ({ children, title, transparent, active, onClick }: Props) => {
+  ({ children, title, variant, active, onClick }: Props) => {
     const theme = useTheme();
-    const variant: TButtonVariant = active
-      ? 'active'
-      : transparent
-      ? 'transparent'
-      : 'normal';
+    const buttonVariant = variant ?? 'normal';
 
-    const colors: Record<TButtonVariant, TButtonColors> = {
+    const colors: Record<typeof buttonVariant, TButtonColors> = {
       active: {
         background: theme.colors.main.secondary.normal,
-        border: theme.colors.main.dark.normal,
+        border: `1px solid ${theme.colors.main.dark.normal}`,
         text: theme.colors.main.light.normal,
       },
       transparent: {
         background: 'transparent',
-        border: 'transparent',
+        border: '1px solid transparent',
         text: theme.colors.main.dark.translucent,
+      },
+      header: {
+        background: 'transparent',
+        border: `1px dashed ${theme.colors.main.dark.translucent}`,
+        text: theme.colors.main.dark.translucent,
+      },
+      headerActive: {
+        background: theme.colors.main.primary.translucent,
+        border: `1px solid ${theme.colors.main.dark.normal}`,
+        text: theme.colors.main.dark.normal,
       },
       normal: {
         background: theme.colors.main.primary.normal,
-        border: theme.colors.main.dark.normal,
+        border: `1px solid ${theme.colors.main.dark.normal}`,
         text: theme.colors.main.dark.translucent,
       },
     };
 
     return (
       <ButtonWrapper
-        $text={colors[variant].text}
-        $background={colors[variant].background}
-        $border={colors[variant].border}
+        $text={colors[buttonVariant].text}
+        $background={colors[buttonVariant].background}
+        $border={colors[buttonVariant].border}
         $active={active}
         onClick={onClick}
         title={title}
