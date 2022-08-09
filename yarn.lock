@@ -1530,10 +1530,12 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@kode-frontend/pathfinder-web-core@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@kode-frontend/pathfinder-web-core/-/pathfinder-web-core-1.1.2.tgz#1c9604f88336f74f41c32887991f5e7a61af6376"
-  integrity sha512-CobogIJOTeLFSoQC/zbQHABPmqqh+6xOGYVnGqn/YovJ1nzsSkOI1d4MD0COtEdeaxUi/S8NxuunvnrlosoRvQ==
+"@kode-frontend/pathfinder-web-core@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@kode-frontend/pathfinder-web-core/-/pathfinder-web-core-2.0.1.tgz#018b1e82b6bb1ef05008eb65c337dc46b7ce7f07"
+  integrity sha512-XjWcEJFBaduYEEbKJHiqDY2ATjrlGkV8Rh9xP30JyuEwz7cvVzGoh39/Wm9CuzPdhzW1yNTrOF8+dNDKZx1qaA==
+  dependencies:
+    url-pattern "^1.0.3"
 
 "@mdx-js/loader@^1.6.22":
   version "1.6.22"
@@ -15461,6 +15463,11 @@ url-parse-lax@^3.0.0:
   integrity sha1-FrXK/Afb42dsGxmZF3gj1lA6yww=
   dependencies:
     prepend-http "^2.0.0"
+
+url-pattern@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/url-pattern/-/url-pattern-1.0.3.tgz#0409292471b24f23c50d65a47931793d2b5acfc1"
+  integrity sha512-uQcEj/2puA4aq1R3A2+VNVBgaWYR24FdWjl7VNW83rnWftlhyzOZ/tBjezRiC2UkIzuxC8Top3IekN3vUf1WxA==
 
 url@^0.11.0:
   version "0.11.0"
