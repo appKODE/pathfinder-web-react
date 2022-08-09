@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 export const TryForm = () => {
   const [value, setValue] = useState(
-    'https://stoplight.io/mocks/kode-hsk/horoshkola-1/6096726/finance/v1/schedule'
+    'http://127.0.0.1:3100/bo/backoffice/api/v1/customers/search/2323-22?page=22&pageSize=2'
   );
 
   const [result, setResult] = useState('');

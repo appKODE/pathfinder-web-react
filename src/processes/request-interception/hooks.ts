@@ -1,6 +1,6 @@
 import intercept from 'fetch-intercept';
 import {
-  createUrlMatchers,
+  createTemplatesBySpec,
   Pathfinder,
 } from '@kode-frontend/pathfinder-web-core';
 import { useEffect } from 'react';
@@ -46,11 +46,14 @@ export function useRequestInterception(
       ): Promise<any[]> | any[] {
         const spec = pathfinder.getSpec();
 
-        const matchers = spec?.urls ? createUrlMatchers(spec.urls) : null;
+        const templatesBySpec = spec?.urls
+          ? createTemplatesBySpec(spec.urls)
+          : null;
+
         const method = config?.method || 'GET';
 
-        const endpointSpec = matchers
-          ? pathfinder.findSpec(matchers, method, url)
+        const endpointSpec = templatesBySpec
+          ? pathfinder.findSpec(templatesBySpec, method, url)
           : null;
 
         const endpointHeaders: Header[] = endpointSpec
@@ -72,8 +75,13 @@ export function useRequestInterception(
 
         const envSpecs = spec?.envs;
 
-        const newUrl = matchers
-          ? pathfinder.buildUrl({ matchers, method, url, envSpecs })
+        const newUrl = templatesBySpec
+          ? pathfinder.buildUrl({
+              templatesBySpec,
+              method,
+              url,
+              envSpecs,
+            })
           : url;
         return [newUrl, config];
       },
@@ -99,10 +107,12 @@ export function useRequestInterception(
       const urlString = typeof url === 'string' ? url : url.toString();
       const spec = pathfinder.getSpec();
       const envSpecs = spec?.envs;
-      const matchers = spec?.urls ? createUrlMatchers(spec.urls) : null;
+      const templatesBySpec = spec?.urls
+        ? createTemplatesBySpec(spec.urls)
+        : null;
 
-      const endpointSpec = matchers
-        ? pathfinder.findSpec(matchers, method.toUpperCase(), urlString)
+      const endpointSpec = templatesBySpec
+        ? pathfinder.findSpec(templatesBySpec, method.toUpperCase(), urlString)
         : null;
 
       const endpointHeaders: Header[] = endpointSpec
@@ -111,9 +121,9 @@ export function useRequestInterception(
 
       const globalHeaders = pathfinder.getGlobalHeaders();
 
-      const newUrl = matchers
+      const newUrl = templatesBySpec
         ? pathfinder.buildUrl({
-            matchers,
+            templatesBySpec,
             method,
             url: urlString,
             envSpecs,
