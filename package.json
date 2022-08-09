@@ -84,7 +84,7 @@
     "typescript": "^4.6.3"
   },
   "dependencies": {
-    "@kode-frontend/pathfinder-web-core": "^1.1.2",
+    "@kode-frontend/pathfinder-web-core": "^2.0.1",
     "fetch-intercept": "^2.4.0",
     "rollup-plugin-postcss": "3.1.6",
     "styled-components": "^5.3.5"
