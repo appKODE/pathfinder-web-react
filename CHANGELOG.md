@@ -1,5 +1,13 @@
 
 
+### [0.4.2](https://https//github.com/appKODE/pathfinder-web-react/compare/v0.4.1...v0.4.2) (2022-08-09)
+
+
+### Bug Fixes
+
+* **dependencies:** update pathfinder-core dependecy. New ver fix find spec method ([5fe040a](https://https//github.com/appKODE/pathfinder-web-react/commit/5fe040ac40915858eaf4aa766da975136d148819))
+* **dependencies:** update pathfinder-core dependency. New ver fix find spec method ([50b8cb0](https://https//github.com/appKODE/pathfinder-web-react/commit/50b8cb0d524dfe5d1dca1b5077f02ece322c985a))
+
 ### [0.4.1](https://https//github.com/appKODE/pathfinder-web-react/compare/v0.4.0...v0.4.1) (2022-06-29)
 
 ## [0.4.0](https://https//github.com/appKODE/pathfinder-web-react/compare/v0.3.1...v0.4.0) (2022-06-29)
